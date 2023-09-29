@@ -1,0 +1,131 @@
+<html>
+<html>
+<head>
+    <title>Chat Bot</title>
+    <script>
+      const chatContainer = document.querySelector('.chat-history');
+      chatContainer.scrollTop = -100;
+
+    </script>
+    <style>
+        .chat-container {
+          width: 500px;
+          margin: 20px auto;
+          background: #eee;
+          border-radius: 10px;
+          padding: 20px;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        .chat-header {
+          background: #6f7d8a;
+          color: #fff;
+          padding: 20px;
+          text-align: center;
+          border-top-left-radius: 10px;
+          border-top-right-radius: 10px;
+        }
+        
+        .chat-history {
+          height: 250px;
+          overflow-y: scroll;
+          padding: 20px;
+          /* scroll-behavior: smooth; */
+         /* scroll-snap-type: y mandatory; */
+        }
+       
+        .chat-history ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+        }
+        
+        .chat-history li {
+          padding: 20px;
+          margin-bottom: 20px;
+          background: #fff;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          border-radius: 10px;
+          position: relative;
+        }
+        
+        .chat-history .user-message {
+          margin-left: 100px;
+          text-align: right;
+        }
+        
+        .chat-history .bot-message {
+          margin-right: 100px;
+          text-align: left;
+          background: #dcdfe1;
+        }
+        
+        .chat-message {
+          padding: 20px;
+          border-top: 1px solid #ddd;
+          position: relative;
+        }
+        
+        .in{
+          width: 81%;
+          padding: 10px;
+          margin-top: 10px;;
+          border-radius: 10px;
+          border: 1px solid #ddd;
+          resize: none;
+        }
+        
+        .chat-message button {
+          float: right;
+          margin-right: -12px;
+          margin-top: 8px;
+          background: #6f7d8a;
+          color: #fff;
+          border-radius: 12px;
+          border: 0;
+          padding: 12px 24px;
+          cursor: pointer;
+        }
+        
+        .clearfix:after {
+          content: "";
+          clear: both;
+          display: table;
+        }
+      </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+          <h3>Chat Bot</h3>
+        </div>
+        <div class="chat-history">
+          {%if d %}
+          <ul class = "four">
+               {%for i,j in d.items() %}
+               <li class="user-message">
+              <p align="left">You : {{ i }}</p>
+              </li>
+              <li class="bot-message">
+               <p>Bot : {{ j }}</p>
+              </li>
+              {%endfor%}
+          </ul>
+          {%endif%}
+        </div>
+        <div class="chat-message clearfix">
+            <form action="/submit" method="POST">
+                <input class="in" type="textarea" name="question"></input>
+                <button type="submit" value="Submit">submit</button>
+            </form>
+        </div>
+      </div>
+</body>
+</html>
+
+
+
+
+
+
+  
+

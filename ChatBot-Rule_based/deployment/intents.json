@@ -1,0 +1,2330 @@
+{
+    "intents" : [
+    {
+          "tag" : "greetings",
+           "patterns" : ["hello"],
+           "responses" : ["Hello!"]
+    },
+      {
+          "tag" : "goodBye",
+           "patterns" : ["See you later"] ,
+           "responses" : ["Talk to you later"]
+      },
+      {
+          "tag" : "age",
+           "patterns" : ["how old are you"] ,
+           "responses" : ["Just born" ]
+      },
+      {
+          "tag" : "name",
+           "patterns" : ["what is your name"] ,
+           "responses" : ["Hi ,I am an AIdriven bot ,can work as a neural assistant"]
+      },
+      {
+          "tag" : "stringerror",
+           "patterns" : ["unclosed string literal"] ,
+           "responses" : ["The string literal does not end with quote marks. This is easy to correct by closing the string literal with the needed quote mark."]
+      },
+      {
+          "tag" : "statementTermination",
+          "patterns" : ["Syntax error, operate to complete BlockStatements"],
+          "responses" : ["missing semicolons at the end of each line"]
+      },
+      {
+          "tag" :"missingIdentifiers" ,
+          "patterns" : ["Syntax error, insert curly braces to complete ClassBody"] ,
+          "responses" : ["missing parenthesis or im-balancing the closing brace"]
+      }, 
+      {
+          "tag" : "returntypeClashes" ,
+          "patterns" : ["This method must return a result of type int"] ,
+          "responses" : ["returning the value from a method whose return type is not 'void'"]
+      },
+      {
+          "tag" : "datatypeMissmatch",
+          "patterns" : ["Type mismatch: cannot convert from int to String"],
+          "responses" : ["you can not store the value of a variable having data type int to a String type variable"]
+       },
+       {
+          "tag" : "mismatch",
+          "patterns" : ["Type mismatch: cannot convert from double to int"],
+          "responses" : ["it's easier to return a double value from a method having int as its return type but the vice-versa cant be achieved"]
+       },
+       {
+          "tag" : "unreachable",
+          "patterns" : ["Unreachable code"] ,
+          "responses" : ["written after the return statements or after the conditions that will never be true"]
+       },
+       {
+          "tag" : "Nullexception",
+          "patterns" : ["null value can't be accepted"],
+          "responses" : ["variable with null value causing the exception"]
+       },
+       {
+          "tag" : "casing",
+          "patterns" : ["improper variable declaration"],
+          "responses" : ["Java was case-sensitive and usually follows camelcase"]
+       },
+       {
+          "tag" : "Functiondeclaration",
+          "patterns" : ["Int and system cannot be resolved to a type"],
+          "responses" : ["check the case - sensitivity of the methods defined or overidden"]
+       },
+       {
+          "tag" : "mismatches",
+          "patterns" : ["Mismatched brackets"] ,
+          "responses" : ["forgot the closing bracket for a method or no balance between code of block"] 
+       },
+       {
+          "tag" : "Missingsemicolons",
+          "patterns" : ["Missing semicolons"],
+          "responses" : ["forgot to terminate the statement or a class"] 
+       },
+       {
+          "tag" : "methodnotdefined",
+          "patterns" : ["Method is undefined"],
+          "responses" : ["should not keep round brackets are appended to a variable"]
+       },
+       {
+          "tag" : "duplicatekeys",
+          "patterns" : ["Variable is already declared"] ,
+          "responses" : ["use the variable without declaring it again"]
+       },
+       {
+          "tag" : "Localvariable",
+          "patterns" : ["Local variable not initialized"],
+          "responses" : ["when using the variable at block level ,either declare the variable at global level or at higher block level"]
+       },
+       {
+          "tag" : "identifier",
+          "patterns" : ["error: identifier expected"],
+          "responses" : ["declared a number at start of variable declaration or using special symbols "]
+       },
+       {
+          "tag" : "statement" ,
+          "patterns" : ["error: not a statement"],
+          "responses" : ["missing any keyword or double quotes for a string in the line of code"]
+       },
+       {
+          "tag" : "boundedException",
+          "patterns" : ["out of bounds for length"] ,
+          "responses" : ["you are trying to access a unassigned element address which contains garbage value"]
+       },
+       {
+          "tag" : "division",
+          "patterns" : ["by zeroat JavaError.main(JavaError)"] ,
+          "responses" : ["cannot divide a number with zero.Use exception handling"]
+       },
+       {
+          "tag" : "array" ,
+          "patterns" : ["NegativeArraySizeException:"],
+          "responses" : ["cannot have a negative-sized array"]
+       },
+       {
+          "tag" : "modify" ,
+          "patterns" : ["unable to modify values after swapping"],
+          "responses" : ["modify the values by using reference or the address of variable"]
+       },
+       {
+          "tag" : "publicClasses",
+          "patterns" : ["unable to access the method declared in public mode of class"] ,
+          "responses" : ["declare the method as static to access data members in the definition"]
+       },
+    {
+        "tag": "classSourceMismatch",
+        "patterns": ["Class and source file mismatch"],
+        "responses": ["The name of the Java source file must exactly match the name of the public Java class as it is defined in the class declaration"]
+    },
+    {
+        "tag": "StaticFunctioninJava",
+        "patterns": ["error: cannot find symbol public static void main(string []a)"],
+        "responses": ["compiler could not find the main method signature for starting the execution, in the declared class system could not recognize the symbol string, where String class Sis capital"]
+    },
+    {
+        "tag": "statementTermination",
+        "patterns": ["error: java: ';' expected"],
+        "responses": ["we should provide semicolon for each statement,to terminate the statement."]
+    },
+    {
+        "tag": "declaration",
+        "patterns": ["error:cannot found symbol method(followed by method name)"],
+        "responses": ["compiler could not find the method ,so first declare the method."]
+    },
+    {
+        "tag": "InvalidParameters",
+        "patterns": ["error:actual and formal argument lists differ in length"],
+        "responses": ["make sure actual and formal arguments are same"]
+    },
+    {
+        "tag": "ImportingLibraries",
+        "patterns": ["error:cannot resolve symbol 'Scanner'"],
+        "responses": ["compiler is searching for Scanner class .So we need to import Java.util.Scanner package."]
+    },
+    {
+        "tag": "NonStaticmethods",
+        "patterns": ["java: non-static method sout() cannot be referenced from a static context"],
+        "responses": ["method should convert from non-static to static method or we should access it through objects"]
+    },
+    {
+        "tag": "this_keyword",
+        "patterns": ["error:non-static variable a cannot be referenced from a static context"],
+        "responses": ["a' is instance andnon static variable .To access instance variable which is from the same class should be declared as static or we should create a object for the class. we should use 'this' keyword to specify current class variables . It is also applicable to invoke current class method and constuctors"]
+    },
+    {
+        "tag": "accessSpecifiers",
+        "patterns": ["error:'print()' in 't1' clashes with 'print()' in 'test'; attempting to assign weaker access privileges ('package-private'); was 'public'"],
+        "responses": ["we can't override protected,private and final methods,so we should use different method names to avoid this error."]
+    },
+    {
+        "tag": "Inheritance",
+        "patterns": ["error:class cannot extend multiple classess"],
+        "responses": ["use interfaces to avoid these error"]
+    },
+    {
+        "tag": "Finalvariable",
+        "patterns": ["error:cannot assign a value to final variable"],
+        "responses": ["we cannot change the value of final varible ."]
+    },
+    {
+        "tag": "dynaminMemoryAllocation",
+        "patterns": ["while upcasting or dynamic method dispatch"],
+        "responses": ["the method should present in reference class ."]
+    },
+    {
+        "tag": "Abstractmethod",
+        "patterns": ["error:class is not abstract and does not overide abstract methods"],
+        "responses": ["we should override all the methods of abstract class in extended classes."]
+    },
+    {
+        "tag": "ExceptionHandling",
+        "patterns": ["error:'try' without 'catch', 'finally' or resource declarations"],
+        "responses": ["if try is declares compiler checks for finally or catch block ,so declare catch ."]
+    },
+    {
+        "tag": "InitialisationOfvariables",
+        "patterns": ["error:variable s might not have been initialized"],
+        "responses": ["before performing any operations on variables plz intialize them."]
+    },
+    {
+        "tag": "Runmethod",
+        "patterns": ["error:run() in mt cannot implement run() in java.lang.Runnable attempting to assign weaker access privileges; was public"],
+        "responses": ["when we working with threads the run() method should return null and access specifier should be public if these both are not present it will give error."]
+    },
+    {
+        "tag": "Inbuilt_function",
+        "patterns": ["java: unreported exception java.lang.InterruptedException; must be caught or declared to be thrown"],
+        "responses": ["we should keep sleep() and wait() in try and catch block."]
+    },
+    {
+        "tag": "exception",
+        "patterns": ["Exception in thread \"main\" java.lang.ArrayIndexOutOfBoundsException: Index 6 out of bounds for length 5"],
+        "responses": ["check the length of array carefully and then perform operations."]
+    },
+    {
+        "tag": "syntax errors:Missing brackets,Misspelled keywords,class not found,Missing double quotes in string",
+        "patterns": ["check properly."],
+        "responses": [""]
+    },
+    {
+        "tag": "ConditionalStatements",
+        "patterns": ["if(n%2==0):"],
+        "responses": ["java doesnt supports colon after conditional statements hence no colons should be kept atfer conditional statements"]
+    },
+    {
+        "tag": "InvalidKeywords",
+        "patterns": ["class myexe extend execption"],
+        "responses": ["wrong keyword use extends"]
+    },
+    {
+        "tag": "ReturnType",
+        "patterns": ["incompatible types: unexpected return value"],
+        "responses": ["no return values for constructor"]
+    },
+    {
+        "tag": "IMplementsKeyword",
+        "patterns": ["cannot inherit interfaces using extends keyword"],
+        "responses": ["we need use implements keyword"]
+    },
+    {
+        "tag": "exceptionThreads",
+        "patterns": ["Exception in thread \"main\" java.lang.UnsatisfiedLinkError: Can't load library: /usr/lib/jvm/java-17-openjdk-amd64/lib/libawt_xawt.so"],
+        "responses": ["cannot import awt package by the system ,check relavent package"]
+    },
+    {
+        "tag": "declarationMethods",
+        "patterns": ["public static void main(string args[]);"],
+        "responses": ["\"S\" should be captital in (string arg[])"]
+    },
+    {
+        "tag": "MainMethod",
+        "patterns": ["System doesn't contain main method"],
+        "responses": ["We need to use main method"]
+    },
+    {
+        "tag": "Interfaces",
+        "patterns": ["interface expected here class b implements A{"],
+        "responses": ["when we miss semicolon in the main method we need to close string literal"]
+    },
+    {
+        "tag": "ClassName",
+        "patterns": ["error: cannot find symbol\nobject a2=new a();\n^\nsymbol: class object\nlocation: class A"],
+        "responses": ["we need to declare object as same as class name"]
+    },
+    {
+        "tag": "semicolon",
+        "patterns": ["error: ';' expected\nimport java.util.*\n^"],
+        "responses": ["we need to end a line with ' ; '"]
+    },
+    {
+        "tag": "bracesMismatch",
+        "patterns": ["error: ',', ')', or '[' expected\npublic static void main(String args())\n^"],
+        "responses": ["we need to use '[ ]' instead of '( )'"]
+    },
+    {
+        "tag": "AlreadydeclaredVariable",
+        "patterns": ["error: illegal start of expression\nSystem.print.out(c+);\n^"],
+        "responses": ["we cannot use a operator after a variable unless there is another variable present after the operator"]
+    },
+    {
+        "tag": "SyntaxMistake",
+        "patterns": ["error: cannot find symbol\nSystem.print.out(c);\n^\nsymbol: variable print\nlocation: class System"],
+        "responses": ["syntax error, original syntax : System.out.println();"]
+    },
+    {
+        "tag": "voidReturnType",
+        "patterns": ["error: cannot find symbol\nvois disp()\n^\nsymbol: class vois"],
+        "responses": ["error return type, original return type \" void \""]
+    },
+    {
+        "tag": "inbuiltPrintingFunction",
+        "patterns": ["Main.java:5: error: package system does not exist\nsystem.out.println(\"Hello World\");"],
+        "responses": ["syntax is: System.out.println();"]
+    },
+    {
+        "tag": "PrivateAccess",
+        "patterns": ["Exception in thread \"main\" java.lang.Error: Unresolved compilation problem:The method disp() from the type A is not visible."],
+        "responses": ["we cannot take methods as private while inherting"]
+    },
+    {
+        "tag": "BalanceOfParenthesis",
+        "patterns": ["error:reached end of file while parsing"],
+        "responses": ["balance the paranthesis"]
+    },
+    {
+        "tag": "caseSensitivity",
+        "patterns": ["public static void main(String[] args)\nor a JavaFX application class must extend javafx.application.Application"],
+        "responses": ["p is capital in the public static void main"]
+    },
+    {
+        "tag": "MultipleException",
+        "patterns": ["public class Multiple exceptions"],
+        "responses": ["space should not be given and e need be return in capital letters"]
+    },
+    {
+        "tag": "ArithematicException",
+        "patterns": ["Exception in thread \"main\" : Unresolved compilation problem:arithmeticexception cannot be resolved to a type"],
+        "responses": ["exception ArithmeticException should start with capital letters without space"]
+    },
+    {
+        "tag": "catchBlock",
+        "patterns": ["error \"arithmeticexception\", VariableDeclaratorId expected after this tokenarithmeticexception cannot be resolved to a type"],
+        "responses": ["variable not declared in catch block."]
+    },
+    {
+        "tag": "ArraySize",
+        "patterns": ["Exception in thread \"main\" java.lang.ArrayIndexOutOfBoundsException: Index 0 out of bounds for length 0"],
+        "responses": ["when we entry the size as 0"]
+    },
+    {
+        "tag": "AssignmentOPerator",
+        "patterns": ["Exception in thread \"main\" java.lang.Error: Unresolved compilation problems: \nSyntax error, insert \"AssignmentOperator Expression\" to complete Assignment"],
+        "responses": ["missing the assignment operator"]
+    },
+    {
+        "tag": "WrongClassName",
+        "patterns": ["Error: Could not find or load main class palindrome\nCaused by: java.lang.ClassNotFoundException: palindrome"],
+        "responses": ["when we provide class and file name diferently"]
+    },
+    {
+        "tag": "IncrementingVariables",
+        "patterns": ["Exception in thread \"main\" java.lang.Error: Unresolved compilation problem: \nSyntax error on token \"++\", Expression expected after this token"],
+        "responses": ["when we miss the increment variable"]
+    },
+    {
+        "tag": "TryBlock",
+        "patterns": ["Exception in thread \"main\" java.lang.Error: Unresolved compilation problems:Syntax error on token \"catch\", for expected"],
+        "responses": ["missing try block with written catch"]
+    },
+    {
+        "tag": "ClosingBraces",
+        "patterns": ["Exception in thread \"main\" java.lang.Error: Unresolved compilation problem: \nSyntax error, insert \"}\" to complete ClassBody"],
+        "responses": ["when we miss the closing braces"]
+    },
+    {
+        "tag": "PrintStatement",
+        "patterns": ["Exception in thread \"main\" java.lang.Error: Unresolved compilation problem: \nThe method println(String) is undefined for the type System"],
+        "responses": ["missing the out in the print statement"]
+    },
+    {
+        "tag": "flowerBraces",
+        "patterns": ["switch(number)"],
+        "responses": ["error: '{' expected"]
+    },
+    {
+        "tag": "Indefinedsymbol",
+        "patterns": ["catch(Arthematic Exeception)"],
+        "responses": ["error: cannot find symbol"]
+    },
+    {
+        "tag": "finalKeyword",
+        "patterns": ["finally"],
+        "responses": ["error: 'finally' without 'try'"]
+    },
+    {
+        "tag": "MultipleInheritance",
+        "patterns": ["class Main extends execption,runnable"],
+        "responses": ["java doesnot support multiple inheritance"]
+    },
+    {
+        "tag": "IncompleteExceptionBlock",
+        "patterns": ["try"],
+        "responses": ["error: 'try' without 'catch', 'finally' or resource declarations"]
+    },
+    {
+        "tag": "SquareBraces",
+        "patterns": ["public static void main(String[] args[])"],
+        "responses": ["error:define main method as public static void main(String args[])"]
+    },
+    {
+        "tag": "caseSensitive",
+        "patterns": ["/Case statements"],
+        "responses": ["error: case, default, or '}' expected"]
+    },
+    {
+        "tag": "UnclosedComment",
+        "patterns": ["/*Case statements"],
+        "responses": ["error: unclosed comment"]
+    },
+    {
+        "tag": "ExplicitConversion",
+        "patterns": ["Exception in thread \"main\" java.lang.Error: Unresolved compilation problems \nType mismatch: cannot convert from int to char\nType mismatch: cannot convert from int to char"],
+        "responses": ["explicit conversion,we need to use similar datatypes"]
+    },
+    {
+        "tag": "Abstractclass",
+        "patterns": ["abstract void m()"],
+        "responses":[ "abstract method cannot have a body"]
+    },
+    {
+        "tag": "InvalidMethod",
+        "patterns":[ "class main()"],
+        "responses":[ "main is not a abstract and does not override abstract method m() in main"]
+    },
+    {
+        "tag": "StringLiteral",
+        "patterns":[ "unclosed string literal"],
+        "responses": ["The string literal does not end with quote marks. This is easy to correct by closing the string literal with the needed quote mark."]
+    },
+    {
+        "tag": "MissingSemicolon",
+        "patterns": ["Syntax error, insert \";\" to complete BlockStatements"],
+        "responses": ["missing semicolons at the end of each line"]
+    },
+    {
+        "tag": "MissingParenthesis",
+        "patterns": ["Syntax error, insert \"}\" to complete ClassBody"],
+        "responses": ["missing parenthesis or im-balancing the closing brace"]
+    },
+    {
+        "tag": "TypeConversion",
+        "patterns":[ "Type mismatch: cannot convert from int to String"],
+        "responses": ["you can not store the value of a variable having data type int to a String type variable"]
+    },
+    {
+        "tag": "InvalidReturnType",
+        "patterns": ["This method must return a result of type int"],
+        "responses":[ "returning the value from a method whose return type is not \u0093void\u0094"]
+    },
+    {
+        "tag": "DoubleToInt",
+        "patterns": ["Type mismatch: cannot convert from double to int"],
+        "responses":[ "it's easier to return a double value from a method having int as its return type but the vice-versa cant be achieved"]
+    },
+    {
+        "tag": "Unreachable",
+        "patterns": ["Unreachable code"],
+        "responses": ["written after the return statements or after the conditions that will never be true"]
+    },
+    {
+        "tag": "NullPointerException",
+        "patterns":[ "topJavaErrors.NullPtrException.main(NullPtrException.java:5)"],
+        "responses":[ "variable with null value causing the exception"]
+    },
+    {
+        "tag": "SourceFileException",
+        "patterns": ["source file not found"],
+        "responses":[ "the file name should be same as class name to create object file"]
+    },
+    {
+        "tag": "ImproperCasing",
+        "patterns":[ "Improper casing"],
+        "responses": ["Java was case-sensitive and usually follows camelcase"]
+    },
+    {
+        "tag": "MethodsSyntax",
+        "patterns": ["Int and system cannot be resolved to a type"],
+        "responses": ["check the case - sensitivity of the methods defined or overidden"]
+    },
+    {
+        "tag": "Mismatchedbraces",
+        "patterns": ["Mismatched brackets"],
+        "responses": ["forgot the closing bracket for a method or no balance between code of block"]
+    },
+    {
+        "tag": "termination",
+        "patterns": ["Missing semicolons"],
+        "responses": ["forgot to terminate the statement or a class"]
+    },
+    {
+        "tag": "RoundBraces",
+        "patterns": ["Method is undefined"],
+        "responses": ["should not keep round brackets are appended to a variable"]
+    },
+    {
+        "tag": "NoDeclaringOfVariables",
+        "patterns": ["Variable is already defined"],
+        "responses":[ "use the variable without declaring it again"]
+    },
+    {
+        "tag": "LocalVariablesNotInitialised",
+        "patterns": ["Local variable not initialized"],
+        "responses": ["when using the variable at block level ,either declare the variable at global level or at higher block level"]
+    },
+    {
+        "tag": "parsing",
+        "patterns":[ "Type mismatch"],
+        "responses":[ "you are trying to parse a datatype which cannot be changed."]
+    },
+    {
+        "tag": "FunctionreturnType",
+        "patterns": ["Return type required"],
+        "responses":[ "your function return type does'nt match to the declared type"]
+    },
+    {
+        "tag": "InfiniteLoop",
+        "patterns": ["Unreachable code"],
+        "responses":[ "your code may attain an infinite loop due to bad constraints"]
+    },
+    {
+        "tag": "ImportingPackages",
+        "patterns": ["error: cannot find symbol"],
+        "responses": ["you have not imported a package related to the method or object used"]
+    },
+    {
+        "tag": "MissingSyntax",
+        "patterns": ["error: package system does not exist"],
+        "responses":[ "missing the appropriate syntax and case sensitivity"]
+    },
+    {
+        "tag": "ExpectedIdentifier",
+        "patterns":[ "error: identifier expected"],
+        "responses": ["declared a number at start of variable declaration or using special symbols"]
+    },
+    {
+        "tag": "MissingKeyword",
+        "patterns": ["error: not a statement"],
+        "responses": ["missing any keyword or double quotes for a string in the line of code"]
+    },
+    {
+        "tag": "UNassignedElement",
+        "patterns": ["out of bounds for length"],
+        "responses":[ "you are trying to access a unassigned element address which contains garbage value"]
+    },
+    {
+        "tag": "DivisionByZero",
+        "patterns":[ "by zeroat JavaError.main(JavaError)"],
+        "responses":[ "cannot divide a number with zero.Use exception handling"]
+    },
+    {
+        "tag": "NegativeSize",
+        "patterns": ["NegativeArraySizeException:"],
+        "responses":[ "cannot have a negative-sized array"]
+    },
+    {
+        "tag": "modifuVariables",
+        "patterns": ["unable to modify values after swapping"],
+        "responses": ["modify the values by using reference or the address of variable"]
+    },
+    {
+        "tag": "AddressReference",
+        "patterns":[ "unable to modify values while processing"],
+        "responses":[ "use & to refer to the address of the variable"]
+    },
+    {
+        "tag": "StaticMethodDeclaration",
+        "patterns": ["unable to access the method declared in public mode of class"],
+        "responses": ["declare the method as static to access data members in the definition"]
+    },
+    {
+        "tag": "Incrementing",
+        "patterns":[ "unable to increment the value of the variable"],
+        "responses": ["variable declared with const or final keyword cant be modified"]
+    },
+    {
+        "tag": "ConstrintsInLoop",
+        "patterns": ["[unable to increment the value of the variable"],
+        "responses": ["constraints in the loop may obstruct the value modification"]
+    },
+    {
+        "tag": "AutoType",
+        "patterns":[ "program throws error when value is assigned"],
+        "responses": ["either assign the variable to a static or auto mode"]
+    },
+    {
+        "tag": "ScopeOfBlock",
+        "patterns":[ "unable to access the value of a variable"],
+        "responses":["the value may belong to less scope value or other foriegn block of code"]
+    },
+    {
+        "tag": "GlobalSCope",
+        "patterns":[ "unable to access the value of a variable"],
+        "responses": ["assign the variable to a extern or global scope"]
+    },
+    {
+        "tag": "IllegalStart",
+        "patterns":[ "illegal start of expression"],
+        "responses": ["the expression framed or to be calculated is not found or declared after the statement applied"]
+    },
+    {
+        "tag": "IncompatibleExpression",
+        "patterns": ["incompatible expression"],
+        "responses": ["you are trying to convert a text string to integer"]
+    },
+    {
+        "tag": "typeConversion",
+        "patterns": ["error during type conversion"],
+        "responses": ["converting data type which is not acceptable like double to int or text string to int or long integer to char"]
+    },
+    {
+        "tag": "Templates",
+        "patterns": ["template undefined"],
+        "responses": ["the given template may not be suitable for all data types"]
+    },
+    {
+        "tag": "Overridding",
+        "patterns": ["method unable to be overridden"],
+        "responses": ["may be you have declared the method as final or passed an incompatible datatype"]
+    },
+    {
+        "tag": "Arguments",
+        "patterns":[ "in-built method unable to be overridden"],
+        "responses": ["missing the appropriate arguments and case sensitivity in the arguments from main library"]
+    },
+    {
+        "tag": "Balancing",
+        "patterns": ["reached end of file while parsing"],
+        "responses": ["have no good balanced parenthesis"]
+    },
+    {
+        "tag": "SemanticExpression",
+        "patterns": ["exploited usage of variables"],
+        "responses": ["do not have semantic expressions of numericals and variables"]
+    },
+    {
+        "tag": "Overloading",
+        "patterns": ["operator .. cannot be applied"],
+        "responses": ["variables like < ,* can be used for method overloading"]
+    },
+    {
+        "tag": "StaticContent",
+        "patterns":[ "non static variables cannot be referenced from a static context"],
+        "responses":[ "trying to access non static variables or methods from static variables or methods"]
+    },
+    {
+        "tag": "Misinterpretation",
+        "patterns": ["NoClassDefFoundError"],
+        "responses": ["class name is misinterpreted or not declared in the file name"]
+    },
+    {
+        "tag": "AccessControl",
+        "patterns":[ "AccessControlException"],
+        "responses": ["requested access to system resources like file system is denied"]
+    },
+    {
+        "tag": "MagicNumber",
+        "patterns":[ "bag magic number error"],
+        "responses":[ "there is a problem with the name of the class and definition files"]
+    },
+    {
+        "tag": "DisContinousDataStream",
+        "patterns": ["broken pipe"],
+        "responses": ["data stream from network end had stopped working"]
+    },
+    {
+        "tag": "WrongSyntax",
+        "patterns": ["could not create java virtual machine JVM"],
+        "responses": ["invoking class file with wrong syntax or arguments"]
+    },
+    {
+        "tag": "WrongDirectory",
+        "patterns":[ "class file contains wrong class"],
+        "responses": ["class file is in wrong directory or error in class name"]
+    },
+    {
+        "tag": "CastingObject",
+        "patterns": ["ClassCastException"],
+        "responses": ["Java code is trying to cast an object to the wrong class"]
+    },
+    {
+        "tag": "ClassError",
+        "patterns": ["ClassFormatError"],
+        "responses": ["linkage error and occurs when a class file cannot be read or interpreted as a class file."]
+    },
+    {
+        "tag": "NotFound",
+        "patterns": ["ClassNotFoundException"],
+        "responses": ["The file is not in the right directory or th e file name is not as class name"]
+    },
+    {
+        "tag": "Initialiser",
+        "patterns": ["exception initialiser error"],
+        "responses": ["something goes wrong with a static initialization"]
+    },
+    {
+        "tag": "IllegalDataUsage",
+        "patterns": ["illegal block size exception"],
+        "responses":[ "the length message is not a multiple of 8 bytes"]
+    },
+    {
+        "tag": "Padding",
+        "patterns":["bad padding exception"],
+        "responses":["padding was used to create a message that can be measured by a multiple of 8 bytes."]
+    },
+    {
+        "tag": "IncompatibleClassChange",
+        "patterns":[ "IncompatibleClassChangeError"],
+        "responses":[ "base class changes after the compilation of a child class"]
+    },
+    {
+        "tag": "FileNotFound",
+        "patterns":["file not found or error while command executed"],
+        "responses": ["file with the specified pathname does not exist or path does exist in given directory"]
+    },
+    {
+        "tag": "CharacterEncoding",
+        "patterns": ["unsupported encoding exception"],
+        "responses":["the character encoding is not supported"]
+    },
+    {
+        "tag": "ResourcePath",
+        "patterns": ["missing resource exception]"],
+        "r]esponses":[ "resource is in the correct classpath, this is usually because a properties file is not configured properly or not defined"]
+    },
+    {
+        "tag": "PublicClass",
+        "patterns": ["Java source file name mismatch"],
+        "responses":[ "The filename must have the same name as the public class name in that file"]
+    },
+    {
+        "tag": "Impropercasing",
+        "patterns": ["Improper casting"],
+        "responses": ["Using the instanceof operator"]
+    },
+    {
+        "tag": "MismatchedBrackets",
+        "patterns": ["Mismatched brackets"],
+        "responses": ["The problem can be solved by using a stack"]
+    },
+    {
+        "tag": "MethodUndefined",
+        "patterns":[ "Method is undefined"],
+        "responses": ["making use of a function called isset() function."]
+    },
+    {
+        "tag": "variableInitialisation",
+        "patterns": ["Variable not initialized"],
+        "responses":[ "Initialize the variable."]
+    },
+    {
+        "tag": "UnableToTypeConvert",
+        "patterns": ["Type mismatch: cannot convert"],
+        "responses":[ "The input either does not match the pattern for the expected type, or is out of range"]
+    },
+    {
+        "tag": "ForgettingState",
+        "patterns":[ "Return type required"],
+        "responses":[ "Forgetting to state the type."]
+    },
+    {
+        "tag": "EnclosingBlockError",
+        "patterns": ["Unreachable code"],
+        "responses":[ "moved outside the enclosing block"]
+    },
+    {
+        "tag": "Parenthesis",
+        "patterns":[ "Syntactical Errors"],
+        "responses": ["check to make sure that the parentheses are matched up correctly"]
+    },
+    {
+        "tag": "Development",
+        "patterns":[ "logic errors."],
+        "responses": ["Test-driven development."]
+    },
+    {
+        "tag": "LexicalSyntax",
+        "patterns": ["Lexical Errors"],
+        "responses": ["Removes one character from the remaining input."]
+    },
+    {
+        "tag": "InbuiltCollection",
+        "patterns":[ "ClassCastException."],
+        "responses": ["Using collections like HashMap, ArrayList and HashTable which do not use Java Generics."]
+    },
+    {
+        "tag": "NullException",
+        "patterns": ["NullPointerException."],
+        "responses": ["Using Apache Commons StringUtils for String operations"]
+    },
+    {
+        "tag": "UnorderedUsageOfNumericals",
+        "patterns":[ "ArithmeticException."],
+        "responses":[ "unordered usage of numericals or special symbols"]
+    },
+    {
+        "tag": "Constructor",
+        "patterns": ["Incompatible types"],
+        "responses":[ "Swapping the inappropriate constructor call with an instance of the correct type"]
+    },
+    {
+        "tag": "UNicodeError",
+        "patterns":[ "UnicodeError"],
+        "responses": ["a backslash character (\\) followed by one or more 'u' characters and four hexadecimal digits"]
+    },
+    {
+        "tag": "CaseError",
+        "patterns": ["method not found"],
+        "responses": ["there may be mistake in case sensitvity or package imported"]
+    },
+    {
+        "tag": "ListRange",
+        "patterns": ["list index out of range"],
+        "responses":[ "Accessed an element from list which is more than its length"]
+    },
+    {
+        "tag": "ReservedKeywords",
+        "patterns": ["invalid syntax"],
+        "responses":[ "Misspelled reserved keywords"]
+    },
+    {
+        "tag": "Indentation",
+        "patterns":[ "unexpected indent"],
+        "responses": ["More spaces at the beginning than the one before it"]
+    },
+    {
+        "tag": "InconsistentSpaces",
+        "patterns": ["inconsistent use of tabs and spaces in indentation"],
+        "responses": ["Ensure that the code has even indentation"]
+    },
+    {
+        "tag": "AccessingBeforeDeclaration",
+        "patterns": ["name 'a' is not defined"],
+        "responses": ["access it after it has been declared"]
+    },
+    {
+        "tag": "Assertion",
+        "patterns":[ "AssertionError"],
+        "responses": ["declare the assertion statement in the try block and catch the assertion error in the catch block"]
+    },
+    {
+        "tag": "AttributeError",
+        "patterns": ["AttributeError"],
+        "responses": ["code that can throw the attribute error should be placed in the try block, and the except block can catch and handle the error"]
+    },
+    {
+        "tag": "ImportError",
+        "patterns": ["ImportError"],
+        "responses": ["if imported class from a module is misplaced, it should be ensured that the class is imported from the correct module"]
+    },
+    {
+        "tag": "Indexing",
+        "patterns":[ "No attribute error"],
+        "responses": ["access the list element at a specific index or correct the assignment"]
+    },
+    {
+        "tag": "KeyError",
+        "patterns": ["KeyError"],
+        "responses": ["keys in a dictionary should be checked before using them to retrieve items"]
+    },
+    {
+        "tag": "NameError",
+        "patterns": ["NameError"],
+        "responses":[ "you need to mention it in the except statement"]
+    },
+    {
+        "tag": "MemoryError",
+        "patterns":[ "Memoryerror"],
+        "responses": ["use the conda install command in python prompt and install those packages to fix the Memory Error"]
+    },
+    {
+        "tag": "TypingError",
+        "patterns": ["TypeError"],
+        "responses":[ "casting your value(s) to the correct type"]
+    },
+    {
+        "tag": "EndOfFile",
+        "patterns": ["EOFError"],
+        "responses": ["pass the exception using the keyword pass in the except block"]
+    },
+    {
+        "tag": "DecimalValueError",
+        "patterns": ["FloatingPointError"],
+        "responses": ["check if the denominator is zero before you divide"]
+    },
+    {
+        "tag": "GeneratorExit",
+        "patterns": ["GeneratorExit"],
+        "responses": ["adding a raise statement after the logging"]
+    },
+    {
+        "tag": "KeyboardInterrupts",
+        "patterns": ["KeyboardInterrupt"],
+        "responses": ["the error is placed inside the try block with the 'raise' keyword to raise that exception"]
+    },
+    {
+        "tag": "Nodeclaration",
+        "patterns":[ "NotImplementedError"],
+        "responses": ["implement the abstract method for which the error is being raised"]
+    },
+    {
+        "tag": "DataInsufficient",
+        "patterns": ["OSError"],
+        "responses": ["OSErrors can usually be prevented by ensuring the existence of the files and directories that are being accessed"]
+    },
+    {
+        "tag": "OverFlow",
+        "patterns": ["OverflowError"],
+        "responses": ["can be handled by using exception handling"]
+    },
+    {
+        "tag": "ConditionalErrors",
+        "patterns": ["ReferenceError"],
+        "responses": ["Reference errors can be resolved using an if-else statement"]
+    },
+    {
+        "tag": "SystemErrors",
+        "patterns": ["SystemError"],
+        "responses": ["to solve this error check the syntax proprely"]
+    },
+    {
+        "tag": "UnboundLocalError",
+        "patterns": ["UnboundLocalError"],
+        "responses": ["mark the variable in the function definition as global, like global items"]
+    },
+    {
+        "tag": "UsingSpecialSymbols",
+        "patterns": ["UnicodeError"],
+        "responses": ["Add a \u0093r\u0094 character in the beginning of string or Change \\ to be /"]
+    },
+    {
+        "tag": "UNicodeErrorinJava",
+        "patterns": ["UnicodeEncodeError"],
+        "responses":[ "use the encode( utf-8 ) and decode( utf-8 ) functions accordingly in your code."]
+    },
+    {
+        "tag": "decodingError",
+        "patterns":[ "UnicodeDecodeError"],
+        "responses": ["To solve the error, specify the correct encoding"]
+    },
+    {
+        "tag": "VlaueError",
+        "patterns": ["ValueError"],
+        "responses":["The lines of code that can throw the ValueError should be placed in the try block, and the except block can catch"]
+    },
+    {
+        "tag": "IterationError",
+        "patterns": ["StopIteration loop error"],
+        "responses": ["write the condition of the loop in a way that is becomes false when you want to stop the iteration"]
+    },
+    {
+        "tag": "TabError",
+        "patterns": ["TabError"],
+        "responses": ["sticking to either spaces or tabs in a program and replacing any tabs or spaces that do not use your preferred method of indentation"]
+    },
+    {
+        "tag": "Looping",
+        "patterns": ["Infinite loop"],
+        "responses": ["use the break and exit statements"]
+    },
+    {
+        "tag": "Misallocation",
+        "patterns": ["Wrong value as Input"],
+        "responses": ["check the inputs you have givena and allocate the correct value"]
+    },
+    {
+        "tag": "InvalidCallToFunction",
+        "patterns": ["Invalid function call"],
+        "responses": ["typing its name and putting a value in parentheses"]
+    },
+    {
+        "tag": "IMplementation",
+        "patterns": ["Incorrect implementation of an algorithm"],
+        "responses": ["syntax should be checked to implement an algorithm"]
+    },
+    {
+        "tag": "EndOfLoop",
+        "patterns": ["Unmarked end of loop"],
+        "responses": ["use break and continue statements wherever it is required"]
+    },
+    {
+        "tag": "InvalidNumberOfParameters",
+        "patterns":[ "Wrong number of parameters passed"],
+        "responses": ["enter the correct number of parameters to be passed"]
+    },
+    {
+        "tag": "java.NullPtrException",
+        "patterns":[ "java.lang.NullPointerException"],
+        "responses": ["There are two overarching types of variables in Java:\n\nPrimitives: variables that contain data. If you want to manipulate the data in a primitive variable you can manipulate that variable directly. By convention primitive types start with a lowercase letter. For example variables of type int or char are primitives.\n\nReferences: variables that contain the memory address of an Object i.e. variables that refer to an Object. If you want to manipulate the Object that a reference variable refers to you must dereference it. Dereferencing usually entails using . to access a method or field, or using [ to index an array. By convention reference types are usually denoted with a type that starts in uppercase. For example variables of type Object are references."]
+    },
+    {
+        "tag": "TryandCatch",
+        "patterns": ["try {\n... \n} catch (/* code to catch IllegalArgumentException, SecurityException, \nIllegalAccessException, and NoSuchFieldException at the same time */) {\nsomeCode();\n}"],
+        "responses": ["try { \n...\n} catch (IllegalArgumentException | SecurityException | IllegalAccessException |\nNoSuchFieldException e) { \nsomeCode();\n}"]
+    },
+    {
+        "tag": "ForException",
+        "patterns": ["try\n{\n...\n}\ncatch (Exception e)\n{\nif (e is FooException)\nthrow;\n}"],
+        "responses": ["catch (WhateverException e) {\nthrow e;\n}"]
+    },
+    {
+        "tag": "FilePathString",
+        "patterns": ["How can I check whether a file exists, before opening it for reading in Java (the equivalent of Perl's -e $filename)?"],
+        "responses": ["File f = new File(filePathString);\nif(f.exists() && !f.isDirectory()) { \n// do something\n}"]
+    },
+    {
+        "tag": "JupiterAPI",
+        "patterns": ["Is there a better way to assert that a method throws an exception in JUnit 5?\n\nCurrently, I have to use an @Rule in order to verify that my test throws an exception, but this doesn't work for the cases where I expect multiple methods to throw exceptions in my test."],
+        "responses": ["import static org.junit.jupiter.api.Assertions.assertThrows;\n\n@Test\nvoid exceptionTesting() {\nMyException thrown = assertThrows(\nMyException.class,\n() -> myObject.doThing(),\n\"Expected doThing() to throw, but it didn't\"\n);\n\nassertTrue(thrown.getMessage().contentEquals(\"Stuff\"));\n}"]
+    },
+    {
+        "tag": "ValidResponseToNullPointer",
+        "patterns": ["I use x != null to avoid NullPointerException. Is there an alternative?if (x != null) {\n// ...\n}"],
+        "responses": ["To put this another way, there are two instances where null checking comes up:\n\nWhere null is a valid response in terms of the contract; and\n\nWhere it isn't a valid response.public Foo(Bar bar) {\nthis.bar = Objects.requireNonNull(bar);\n}"]
+    },
+    {
+        "tag": "WordContainingException",
+        "patterns": ["I would like to create a custom exception in Java, how do I do it?\n\n...\n\ntry{\n\n...\n\nString word=reader.readLine();\n\nif(word.contains(\" \"))\n/*create custom exception*/\n\n}\ncatch(){\nWhen I create my custom exception with throw new..., I obtain the error unreported exception...must be caught or declared to be thrown"],
+        "responses": ["class WordContainsException extends Exception\n{\n// Parameterless Constructor\npublic WordContainsException() {}\n\n// Constructor that accepts a message\npublic WordContainsException(String message)\n{\nsuper(message);\n}\n}"]
+    },
+    {
+        "tag": "HeirarchyException",
+        "patterns": ["How do we create custom exceptions in Java?"],
+        "responses":[ "To define a checked exception you create a subclass (or hierarchy of subclasses) of java.lang.Exception. For example:\n\npublic class FooException extends Exception {\npublic FooException() { super(); }\npublic FooException(String message) { super(message); }\npublic FooException(String message, Throwable cause) { super(message, cause); }\npublic FooException(Throwable cause) { super(cause); }\n}\nMethods that can potentially throw or propagate this exception must declare it:\n\npublic void calculate(int i) throws FooException, IOException;\n... and code calling this method must either handle or propagate this exception (or both):\n\ntry {\nint i = 5;\nmyObject.calculate(5);\n} catch(FooException ex) {\n// Print error and terminate application.\nex.printStackTrace();\nSystem.exit(1);\n} catch(IOException ex) {\n// Rethrow as FooException.\nthrow new FooException(ex);\n}\nYou'll notice in the above example that IOException is caught and rethrown as FooException. This is a common technique used to encapsulate exceptions (typically when implementing an API).\n\nSometimes there will be situations where you don't want to force every method to declare your exception implementation in its throws clause. In this case you can create an unchecked exception. An unchecked exception is any exception that extends java.lang.RuntimeException (which itself is a subclass of java.lang.Exception):\n\npublic class FooRuntimeException extends RuntimeException {\n...\n}\nMethods can throw or propagate FooRuntimeException exception without declaring it; e.g.\n\npublic void calculate(int i) {\nif (i < 0) {\nthrow new FooRuntimeException(\"i < 0: \" + i);\n}\n}\nUnchecked exceptions are typically used to denote a programmer error, for example passing an invalid argument to a method or attempting to breach an array index bounds.\n\nThe java.lang.Throwable class is the root of all errors and exceptions that can be thrown within Java. java.lang.Exception and java.lang.Error are both subclasses of Throwable. Anything that subclasses Throwable may be thrown or caught. However, it is typically bad practice to catch or throw Error as this is used to denote errors internal to the JVM that cannot usually be \"handled\" by the programmer (e.g. OutOfMemoryError). Likewise you should avoid catching Throwable, which could result in you catching Errors in addition to Exceptions."]
+    },
+    {
+        "tag": "SerialiseDTO",
+        "patterns": ["The article includes this piece of code:\n\npublic static string SerializeDTO(DTO dto) {\ntry {\nXmlSerializer xmlSer = new XmlSerializer(dto.GetType());\nStringWriter sWriter = new StringWriter();\nxmlSer.Serialize(sWriter, dto);\nreturn sWriter.ToString();\n}\ncatch(Exception ex) {\nthrow ex;\n}\n}\nThe rest of the article looks sane and reasonable (to a noob), but that try-catch-throw throws a WtfException... Isn't this exactly equivalent to not handling exceptions at all?\n\nErgo:\n\npublic static string SerializeDTO(DTO dto) {\nXmlSerializer xmlSer = new XmlSerializer(dto.GetType());\nStringWriter sWriter = new StringWriter();\nxmlSer.Serialize(sWriter, dto);\nreturn sWriter.ToString();\n}"],
+        "responses": ["First, the way that the code in the article does it is evil. throw ex will reset the call stack in the exception to the point where this throw statement is losing the information about where the exception actually was created.\n\nSecond, if you just catch and re-throw like that, I see no added value. The code example above would be just as good (or, given the throw ex bit, even better) without the try-catch.\n\nHowever, there are cases where you might want to catch and rethrow an exception. Logging could be one of them:\n\ntry \n{\n// code that may throw exceptions \n}\ncatch(Exception ex) \n{\n// add error logging here\nthrow;\n}"]
+    },
+    {
+        "tag": "IndexProcessor",
+        "patterns":[ "I need a solution to properly stop the thread in Java.\n\nI have IndexProcessorclass which implements the Runnable interface:\n\npublic class IndexProcessor implements Runnable {\n\nprivate static final Logger LOGGER = LoggerFactory.getLogger(IndexProcessor.class);\n\n@Override\npublic void run() {\nboolean run = true;\nwhile (run) {\ntry {\nLOGGER.debug(\"Sleeping...\");\nThread.sleep((long) 15000);\n\nLOGGER.debug(\"Processing\");\n} catch (InterruptedException e) {\nLOGGER.error(\"Exception\", e);\nrun = false;\n}\n}\n\n}\n}\nAnd I have ServletContextListener class which starts and stops the thread:\n\npublic class SearchEngineContextListener implements ServletContextListener {\n\nprivate static final Logger LOGGER = LoggerFactory.getLogger(SearchEngineContextListener.class);\n\nprivate Thread thread = null;\n\n@Override\npublic void contextInitialized(ServletContextEvent event) {\nthread = new Thread(new IndexProcessor());\nLOGGER.debug(\"Starting thread: \" + thread);\nthread.start();\nLOGGER.debug(\"Background process successfully started.\");\n}\n\n@Override\npublic void contextDestroyed(ServletContextEvent event) {\nLOGGER.debug(\"Stopping thread: \" + thread);\nif (thread != null) {\nthread.interrupt();\nLOGGER.debug(\"Thread successfully stopped.\");\n}\n}\n}\nBut when I shutdown tomcat, I get the exception in my IndexProcessor class:\n\n2012-06-09 17:04:50,671 [Thread-3] ERROR IndexProcessor Exception\njava.lang.InterruptedException: sleep interrupted\nat java.lang.Thread.sleep(Native Method)\nat lt.ccl.searchengine.processor.IndexProcessor.run(IndexProcessor.java:22)\nat java.lang.Thread.run(Unknown Source)\nI am using JDK 1.6. So the question is:\n\nHow can I stop the thread and not throw any exceptions?\n\nP.S. I do not want to use .stop(); method because it is deprecated."],
+        "responses":[ "In the IndexProcessor class you need a way of setting a flag which informs the thread that it will need to terminate, similar to the variable run that you have used just in the class scope.\n\nWhen you wish to stop the thread, you set this flag and call join() on the thread and wait for it to finish.\n\nMake sure that the flag is thread safe by using a volatile variable or by using getter and setter methods which are synchronised with the variable being used as the flag.\n\npublic class IndexProcessor implements Runnable {\n\nprivate static final Logger LOGGER = LoggerFactory.getLogger(IndexProcessor.class);\nprivate volatile boolean running = true;\n\npublic void terminate() {\nrunning = false;\n}\n\n@Override\npublic void run() {\nwhile (running) {\ntry {\nLOGGER.debug(\"Sleeping...\");\nThread.sleep((long) 15000);\n\nLOGGER.debug(\"Processing\");\n} catch (InterruptedException e) {\nLOGGER.error(\"Exception\", e);\nrunning = false;\n}\n}\n\n}\n}\nThen in SearchEngineContextListener:\n\npublic class SearchEngineContextListener implements ServletContextListener {\n\nprivate static final Logger LOGGER = LoggerFactory.getLogger(SearchEngineContextListener.class);\n\nprivate Thread thread = null;\nprivate IndexProcessor runnable = null;\n\n@Override\npublic void contextInitialized(ServletContextEvent event) {\nrunnable = new IndexProcessor();\nthread = new Thread(runnable);\nLOGGER.debug(\"Starting thread: \" + thread);\nthread.start();\nLOGGER.debug(\"Background process successfully started.\");\n}\n\n@Override\npublic void contextDestroyed(ServletContextEvent event) {\nLOGGER.debug(\"Stopping thread: \" + thread);\nif (thread != null) {\nrunnable.terminate();\nthread.join();\nLOGGER.debug(\"Thread successfully stopped.\");\n}\n}\n}"]
+    },
+    {
+        "tag": "ReferenceTypeError",
+        "patterns": ["String x = (String) null;\nWhy there is no exception in this statement?\n\nString x = null;\nSystem.out.println(x);\nIt prints null. But .toString() method should throw a null pointer exception."],
+        "responses": ["You can cast null to any reference type without getting any exception.\n\nThe println method does not throw null pointer because it first checks whether the object is null or not. If null then it simply prints the string \"null\". Otherwise it will call the toString method of that object.\n\nAdding more details: Internally print methods call String.valueOf(object) method on the input object. And in valueOf method, this check helps to avoid null pointer exception:\n\nreturn (obj == null) ? \"null\" : obj.toString();\nFor rest of your confusion, calling any method on a null object should throw a null pointer exception, if not a special case."]
+    },
+    {
+        "tag": "DefaultParameters",
+        "patterns":[ "Use of java.net.URLConnection is asked about pretty often here, and the Oracle tutorial is too concise about it.\n\nThat tutorial basically only shows how to fire a GET request and read the response. It doesn't explain anywhere how to use it to, among others, perform a POST request, set request headers, read response headers, deal with cookies, submit a HTML form, upload a file, etc.\n\nSo, how can I use java.net.URLConnection to fire and handle \"advanced\" HTTP requests?"],
+        "responses": ["We first need to know at least the URL and the charset. The parameters are optional and depend on the functional requirements.\n\nString url = \"http://example.com\";\nString charset = \"UTF-8\"; // Or in Java 7 and later, use the constant: java.nio.charset.StandardCharsets.UTF_8.name()\nString param1 = \"value1\";\nString param2 = \"value2\";\n// ...\n\nString query = String.format(\"param1=%s&param2=%s\",\nURLEncoder.encode(param1, charset),\nURLEncoder.encode(param2, charset));\nThe query parameters must be in name=value format and be concatenated by &. You would normally also URL-encode the query parameters with the specified charset using URLEncoder#encode().\n\nThe String#format() is just for convenience. I prefer it when I would need the String concatenation operator + more than twice."]
+    },
+    {
+        "tag": "Versioning",
+        "patterns": ["I have a very simple question about re-throwing exception in Java.\n\nHere is the code snippet:\n\npublic static void main(String[] args) throws FileNotFoundException {\ntry {\nFileReader reader = new FileReader(\"java.pdf\");\n} catch (FileNotFoundException ex) {\nthrow ex;\n}\n}\n\npublic static void main(String[] args) throws FileNotFoundException { \nFileReader reader = new FileReader(\"java.pdf\"); \n}\nWhy do we need to re-throw ex in the first version while the second version looks more elegant? What might be the benefits and which version is preferred over the other?"],
+        "responses": ["You are right. Second version is better. Moreover the first version does not make any sense. It does the same except the stack trace of the exception will be \"wrong\".\n\nThere are the following reasons to \"re-throw\" exceptions:\n\nIf you have something to do before.\nIf you catch exception of one type and throw exception of other type:\nexample:\n\ntry {\n// do something\n} catch (IOException ioe) {\nthrow new IllegalStateException(ioe);\n}"]
+    },
+    {
+        "tag": "ArrayINdexBounderror",
+        "patterns": ["How to clear ArrayIndexOutOfBound exception in java\n\nException in thread \"main\" java.lang.ArrayIndexOutOfBoundsException: 10 at word.main(word.java:17)\n\nMy code as follows:\n\nimport java.util.*;\nimport java.lang.*;\nclass word{\n\npublic static void main(String[] args){\nString n;\nString a[]={\"zero\",\"one\",\"two\",\"three\",\"four\",\"five\",\"six\",\"seven\",\"eight\",\"nine\",\"ten\"};\nString b[]={\"eleven\",\"twelve\",\"thirteen\",\"fourteen\",\"fifteen\",\"sixteen\",\"seventeen\",\"eighteen\",\"nineteen\",\"twenty\"};\nSystem.out.println(\"Enter number in words\");\nScanner sc=new Scanner(System.in);\nn=sc.next();\nfor(int i=0;i<=20;i++){\nif(n==a[i]){\nSystem.out.println(i);\nbreak;\n}\nelse if(n==b[i]){\n\nSystem.out.println(i);\nbreak;\n}\n}\n}\n}"],
+        "responses": ["In your code, you're trying to access the 11th (and 12th, etc...) index a 10 length arrays. (A is 11, B is 10). Considering you're apparently trying to output numerical value for a given \"in letters\" number, the best solution seems to be looping 21 times on a single array containing the 21 elements.\n\nLast thing, you should always use array.length in a loop, using a litteral value like \"20\" means you'll have to edit it as soon as you edit your array.\n\nTo sum up, it would look like this :\n\npublic static void main(String[] args){\nString n;\nString a[]={\"zero\",\"one\",\"two\",\"three\",\"four\",\"five\",\"six\",\"seven\",\"eight\",\"nine\",\"ten\", \"eleven\",\"twelve\",\"thirteen\",\"fourteen\",\"fifteen\",\"sixteen\",\"seventeen\",\"eighteen\",\"nineteen\",\"twenty\"}; \nSystem.out.println(\"Enter number in words\");\nScanner sc=new Scanner(System.in);\nn=sc.next();\nfor(int i=0;i<a.length;i++){\nif(n.equals(a[i])){\nSystem.out.println(i);\nbreak;\n}\n}\n}"]
+    },
+    {
+        "tag": "StackTrace",
+        "patterns":[ "I'm dealing with a SEVERE exception in Java that looks like this: SEVERE: Context initialization failed org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'birtReportRenderer': Injection of autowired dependencies failed; \n\nnested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire method: public void com.convergys.raspberry.server.filemgmt.FileWorker.setFileAuditTbl(com.convergys.raspberry.server.database.FileAuditTbl); \n\nnested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fileAuditTbl': Invocation of init method failed; \n\nnested exception is org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; \n\nnested exception is org.apache.commons.dbcp.SQLNestedException: Cannot load JDBC driver class 'org.postgresql.Driver'\nAll this nested exceptions were in line like this:\n\nexception; exception; exception; etc.\nWhat is the sequence of events here? Should I look to the last nested exception and deal with the JDBC, should I start with the first exception or should I look someplace else?"],
+        "responses": ["You should start from root cause (bottom up approach to the stacktrace) , so the first one to look at, nested exception is org.apache.commons.dbcp.SQLNestedException: Cannot load JDBC driver class 'org.postgresql.Driver'\n\nAnd it caused ,\n\nnested exception is org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection;\n\nAnd it in-turn caused the other ones and the failure of bean creation .So you need to check your postgresql driver first."]
+    },
+    {
+        "tag": "CheckedException",
+        "patterns": ["I'm looking to learn how to throw a super simple exception in java. I have the following:\n\npublic Percolation(int N) // create N-by-N grid, with all sites blocked\n{\nif(N < 1)\nthrow new Exception(\"N must be greater than zero.\");\n\ngrid = new boolean[N * N + 2];\ndimension = N;\ngrid[0] = true;\ngrid[N+1] = true; \nunionStruct = new QuickFindUF(N+2);\n}\nIt's not compiling, but that's the type of thing I'm looking to do. What's the proper syntax to do this?"],
+        "responses":[ "It's because you're throwing a checked exception without declaring the exception you're throwing. In your case you should probably be throwing an exception derived from RuntimeException instead, and these are not checked (meaning you don't have to declare them). So the two ways to fix this are\n\nthrow new IllegalArgumentException(\"N must be greater than zero.\"); // unchecked\nor\n\npublic Percolation(int N) throws Exception"]
+    },
+    {
+        "tag": "loadingLibrary",
+        "patterns": ["I am using OpenCv in Java.\n\nimport org.opencv.core.Mat;\nNow i'm trying to initialize a new Mat like this:\n\nMat points = new Mat();\nWhat i recieve is the following exception: Exception in thread \"main\" java.lang.UnsatisfiedLinkError:\n\norg.opencv.core.Mat.n_Mat()J\nat org.opencv.core.Mat.n_Mat(Native Method)\nat org.opencv.core.Mat.<init>(Mat.java:15)\nI have no idea what this exception is about. Also no idea what i could have done wrong. Do you?"],
+        "responses":[ "System.loadLibrary(Core.NATIVE_LIBRARY_NAME);"]
+    },
+    {
+        "tag": "CallerStackTrace",
+        "patterns": ["In Java, if I declare and caught an exception, can I handle the exception in a caller anyway? Or it needs not to be caught to handle it by caller?\n\nclass A {\nvoid first() throws Exception { \ntry {\nthrow new Exception(\"my exception\")\n} catch (Exception e) {\nlog.message(\"Error in first()\", e.getCouse)\nthrow e\n}\n}\n}\n\nclass B {\nResult second(A a) {\ntry {\na.first()\n} catch (Exception e) {\nlog.message(\"Caught in B class\", e.message)\nreturn new Result(result: null, error: e.message)\n}\n}\n\nsecond(A a)\n}"],
+        "responses":[ "You can simply rethrow the exception you've caught (obviously the surrounding method has to permit this via its signature etc.). The exception will maintain the original stack trace.\n\ncatch (WhateverException e) {\nthrow e;\n}\nYou can also wrap the exception in another one AND keep the original stack trace by passing in the Exception as a Throwable as the cause parameter:\n\ntry\n{\n...\n}\ncatch (Exception e)\n{\nthrow new YourOwnException(e);\n}"]
+    },
+    {
+        "tag": "ReadString",
+        "patterns": ["I've been using the idiom below for some time now. And it seems to be the most wide-spread, at least on the sites I've visited.\n\nIs there a better/different way to read a file into a string in Java?\n\nprivate String readFile(String file) throws IOException {\nBufferedReader reader = new BufferedReader(new FileReader (file));\nString line = null;\nStringBuilder stringBuilder = new StringBuilder();\nString ls = System.getProperty(\"line.separator\");\n\ntry {\nwhile((line = reader.readLine()) != null) {\nstringBuilder.append(line);\nstringBuilder.append(ls);\n}\n\nreturn stringBuilder.toString();\n} finally {\nreader.close();\n}\n}"],
+        "responses":[ "Java 11 added the readString() method to read small files as a String, preserving line terminators:\n\nString content = Files.readString(path, encoding);\nFor versions between Java 7 and 11, here's a compact, robust idiom, wrapped up in a utility method:\n\nstatic String readFile(String path, Charset encoding)\nthrows IOException\n{\nbyte[] encoded = Files.readAllBytes(Paths.get(path));\nreturn new String(encoded, encoding);\n}"]
+    },
+    {
+        "tag": "NetBeans",
+        "patterns": ["I am using Netbeans. I did some things with bindings and now whenever I start my program, before it even initializes the form, it gives me an error\n\nThe exception in thread main is occuring before the form is even an initialized object yet. The form is not even an object yet. Every line in my main() causes an exception. Random stuff. I don't understand it at all.\n\nHere is the error.\n\nException in thread \"main\" java.lang.ExceptionInInitializerError\nat obd2ner.main(obd2ner.java:26)\nCaused by: java.lang.ClassCastException\nat java.lang.Class.cast(Class.java:2990)\nat org.jdesktop.beansbinding.Binding.convertForward(Binding.java:1312)\nat org.jdesktop.beansbinding.Binding.getSourceValueForTarget(Binding.java:844)\nat org.jdesktop.beansbinding.Binding.refreshUnmanaged(Binding.java:1222)\nat org.jdesktop.beansbinding.Binding.refresh(Binding.java:1207)\nat org.jdesktop.beansbinding.AutoBinding.tryRefreshThenSave(AutoBinding.java:162)\nat org.jdesktop.beansbinding.AutoBinding.bindImpl(AutoBinding.java:199)\nat org.jdesktop.beansbinding.Binding.bindUnmanaged(Binding.java:959)\nat org.jdesktop.beansbinding.Binding.bind(Binding.java:944)\nat org.jdesktop.beansbinding.BindingGroup.bind(BindingGroup.java:143)\nat OBD2nerForm.initComponents(OBD2nerForm.java:731)\nat OBD2nerForm.<init>(OBD2nerForm.java:75)\nat Status.<clinit>(Status.java:41)\n... 1 more\nJava Result: 1\nOBD2nerForm line 731 is bindingGroup.bind(); sometimes it errors out on pack();\n\nthe exception in main() does not even seem relevant because it occurs as soon as the program is run and every time I comment out a line it jumps to the next\n\npublic void actionPerformed(ActionEvent evt) {\njFormattedTextField2ActionPerformed(evt);\n}\n});\n\njLabel8.setText(\"Data In Que:\");\n\njLabel9.setFont(new Font(\"DejaVu Sans\", 0, 14));\njLabel9.setText(\"FFFFFFFFFFFFFFFFFFFF\");\n\nGroupLayout jPanel5Layout = new GroupLayout(jPanel5);\njPanel5.setLayout(jPanel5Layout);\njPanel5Layout.setHorizontalGroup(\njPanel5Layout.createParallelGroup(GroupLayout.LEADING)\n.add(jPanel5Layout.createSequentialGroup()\n.add(jPanel5Layout.createParallelGroup(GroupLayout.LEADING)\n.add(jPanel5Layout.createSequentialGroup()\n.add(19, 19, 19)\n.add(jPanel5Layout.createParallelGroup(GroupLayout.TRAILING)\n.add(jLabel7)\n.add(jLabel5)\n.add(jLabel6))\n.add(18, 18, 18)\n.add(jPanel5Layout.createParallelGroup(GroupLayout.LEADING)\n.add(GroupLayout.TRAILING, jFormattedTextField1, GroupLayout.PREFERRED_SIZE, 22, GroupLayout.PREFERRED_SIZE)\n.add(GroupLayout.TRAILING, jCheckBox1)\n.add(GroupLayout.TRAILING, jCheckBox11))\n.addPreferredGap(LayoutStyle.RELATED)\n.add(jPanel5Layout.createParallelGroup(GroupLayout.TRAILING)\n.add(jFormattedTextField2, GroupLayout.PREFERRED_SIZE, 22, GroupLayout.PREFERRED_SIZE)\n.add(jCheckBox12)\n.add(jCheckBox2))\n.addPreferredGap(LayoutStyle.RELATED)\n.add(jPanel5Layout.createParallelGroup(GroupLayout.TRAILING)\n.add(jFormattedTextField3, GroupLayout.PREFERRED_SIZE, 22, GroupLayout.PREFERRED_SIZE)\n.add(jCheckBox13)\n.add(jCheckBox3))\n.addPreferredGap(LayoutStyle.RELATED)\n.add(jPanel5Layout.createParallelGroup(GroupLayout.TRAILING)\n.add(jFormattedTextField4, GroupLayout.PREFERRED_SIZE, 22, GroupLayout.PREFERRED_SIZE)\n.add(jCheckBox14)\n.add(jCheckBox4))\n.addPreferredGap(LayoutStyle.RELATED)\n.add(jPanel5Layout.createParallelGroup(GroupLayout.TRAILING)\n.add(jFormattedTextField5, GroupLayout.PREFERRED_SIZE, 22, GroupLayout.PREFERRED_SIZE)\n.add(jCheckBox15)\n.add(jCheckBox5))\n.addPreferredGap(LayoutStyle.RELATED)\n.add(jPanel5Layout.createParallelGroup(GroupLayout.TRAILING)\n.add(jFormattedTextField6, GroupLayout.PREFERRED_SIZE, 22, GroupLayout.PREFERRED_SIZE)\n.add(jCheckBox16)\n.add(jCheckBox6))\n.addPreferredGap(LayoutStyle.RELATED)\n.add(jPanel5Layout.createParallelGroup(GroupLayout.TRAILING)\n.add(jFormattedTextField7, GroupLayout.PREFERRED_SIZE, 22, GroupLayout.PREFERRED_SIZE)\n.add(jCheckBox17)\n.add(jCheckBox7))\n.addPreferredGap(LayoutStyle.RELATED)\n.add(jPanel5Layout.createParallelGroup(GroupLayout.TRAILING)\n.add(jFormattedTextField8, GroupLayout.PREFERRED_SIZE, 22, GroupLayout.PREFERRED_SIZE)\n.add(jCheckBox18)\n.add(jCheckBox8))\n.addPreferredGap(LayoutStyle.RELATED)\n.add(jPanel5Layout.createParallelGroup(GroupLayout.LEADING)\n.add(GroupLayout.TRAILING, jFormattedTextField9, GroupLayout.PREFERRED_SIZE, 22, GroupLayout.PREFERRED_SIZE)\n.add(GroupLayout.TRAILING, jCheckBox19)\n.add(GroupLayout.TRAILING, jCheckBox9))\n.addPreferredGap(LayoutStyle.RELATED)\n.add(jPanel5Layout.createParallelGroup(GroupLayout.LEADING)\n.add(jCheckBox20)\n.add(jCheckBox10)\n.add(jFormattedTextField10, GroupLayout.PREFERRED_SIZE, 22, GroupLayout.PREFERRED_SIZE)))\n.add(jPanel5Layout.createSequentialGroup()\n.add(4, 4, 4)\n.add(jPanel5Layout.createParallelGroup(GroupLayout.LEADING)\n.add(jPanel5Layout.createSequentialGroup()\n.add(jLabel8)\n.addPreferredGap(LayoutStyle.RELATED)\n.add(jLabel9, GroupLayout.PREFERRED_SIZE, 256, GroupLayout.PREFERRED_SIZE))\n.add(jSeparator1, GroupLayout.PREFERRED_SIZE, 474, GroupLayout.PREFERRED_SIZE))))\n.addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))\n.add(GroupLayout.TRAILING, jPanel5Layout.createSequentialGroup()\n.addContainerGap(346, Short.MAX_VALUE)\n.add(jToggleButton3, GroupLayout.PREFERRED_SIZE, 132, GroupLayout.PREFERRED_SIZE)\n.addContainerGap())\n);\njPanel5Layout.setVerticalGroup(\njPanel5Layout.createParallelGroup(GroupLayout.LEADING)\n.add(jPanel5Layout.createSequentialGroup()\n.addContainerGap()\n.add(jPanel5Layout.createParallelGroup(GroupLayout.BASELINE)\n.add(jLabel5)\n.add(jFormattedTextField1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)\n.add(jFormattedTextField2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)\n.add(jFormattedTextField3, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)\n.add(jFormattedTextField4, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)\n.add(jFormattedTextField5, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)\n.add(jFormattedTextField6, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)\n.add(jFormattedTextField7, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)\n.add(jFormattedTextField8, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)\n.add(jFormattedTextField9, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)\n.add(jFormattedTextField10, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))\n.addPreferredGap(LayoutStyle.RELATED)\n.add(jSeparator1, GroupLayout.PREFERRED_SIZE, 0, GroupLayout.PREFERRED_SIZE)\n.addPreferredGap(LayoutStyle.RELATED)\n.add(jPanel5Layout.createParallelGroup(GroupLayout.LEADING)\n.add(jCheckBox3)\n.add(jCheckBox1)\n.add(jCheckBox2)\n.add(jCheckBox4)\n.add(jCheckBox5)\n.add(jCheckBox6)\n.add(jCheckBox7)\n.add(jCheckBox8)\n.add(jCheckBox9)\n.add(jLabel6)\n.add(jCheckBox10))\n.addPreferredGap(LayoutStyle.RELATED)\n.add(jPanel5Layout.createParallelGroup(GroupLayout.TRAILING)\n.add(jPanel5Layout.createParallelGroup(GroupLayout.LEADING)\n.add(jLabel7)\n.add(jPanel5Layout.createParallelGroup(GroupLayout.TRAILING)\n.add(jCheckBox13)\n.add(jCheckBox12)\n.add(jCheckBox11)\n.add(jCheckBox14)\n.add(jCheckBox15)\n.add(jCheckBox16)\n.add(jCheckBox17)\n.add(jCheckBox18)\n.add(jCheckBox19)))\n.add(jCheckBox20))\n.addPreferredGap(LayoutStyle.RELATED, 42, Short.MAX_VALUE)\n.add(jPanel5Layout.createParallelGroup(GroupLayout.BASELINE)\n.add(jToggleButton3)\n.add(jLabel8)\n.add(jLabel9))\n.addContainerGap())\n);\n\njTabbedPane1.addTab(\"tab6\", jPanel5);\n\nadd(jTabbedPane1, BorderLayout.CENTER);\n\nbindingGroup.bind();\n\npack();\n}// </editor-fold> \nHelp, I do not understand. What information do you need from me?"],
+        "responses": ["You get an ExceptionInInitializerError if something goes wrong in the static initializer block.\n\nclass C\n{\nstatic\n{\n// if something does wrong -> ExceptionInInitializerError\n}\n}\nBecause static variables are initialized in static blocks there are a source of these errors too. An example:\n\nclass C\n{\nstatic int v = D.foo();\n}\n=>\n\nclass C\n{\nstatic int v;\n\nstatic\n{\nv = D.foo();\n}\n}\nSo if foo() goes wild, you get a ExceptionInInitializerError."]
+    },
+    {
+        "tag": "HandlersException",
+        "patterns": ["Is that possible to write unchecked exception in Java? Maybe would it be good idea to tell compiler don't check the throws while compiling?\n\nHow does JVM differ checked vs unchecked exception? Is it JVM or Java Class level?"],
+        "responses": ["The Java programming language requires that a program contains handlers for checked exceptions which can result from execution of a method or constructor (\u00a78.4.6, \u00a78.8.5). This compile-time checking for the presence of exception handlers is designed to reduce the number of exceptions which are not properly handled. For each checked exception which is a possible result, the throws clause for the method or constructor must mention the class of that exception or one of the superclasses of the class of that exception (\u00a711.2.3)."]
+    },
+    {
+        "tag": "RuntimeException",
+        "patterns": ["Is it possible to create my own unchecked exception in Java?\n\nBasically, I'd like to\n\nHave my own exception class, MyUncheckedException\nThat does not make me update all methods that call the method that throws this exception with a flood of own throws"],
+        "responses": ["Generally speaking, do not throw a RuntimeException or create a subclass of RuntimeException simply because you don't want to be bothered with specifying the exceptions your methods can throw.\n\nHere's the bottom line guideline: If a client can reasonably be expected to recover from an exception, make it a checked exception. If a client cannot do anything to recover from the exception, make it an unchecked exception."]
+    },
+    {
+        "tag": "ConnectException",
+        "patterns":[ "I want to know how I can catch a 'connection refused' exception in Java when I am using socket. (which would happen when server is down or not responding.)\n\nBelow is how I have implemented so far.\n\ntry {\nsockfd = new Socket(host.getHostName(),heart_port);\nsockfd.setReuseAddress(true);\nBufferedReader message = new BufferedReader(new InputStreamReader ( sockfd.getInputStream() ) );\nmessage.close();\nsockfd.close();\n} catch (UnknownHostException e) {\n// TODO Auto-generated catch block\ne.printStackTrace();\n} catch (IOException e) {\n// TODO Auto-generated catch block\ne.printStackTrace();\n}"],
+        "responses": ["Add ConnectException before IOException\n\ncatch (ConnectException e) {\n// TODO Auto-generated catch block\ne.printStackTrace();\n}"]
+    },
+    {
+        "tag": "LoggingLevel",
+        "patterns":[ "There's a common problem I've come across a few times when logging exceptions in Java. There seem to be various different types to deal with. E.g. some wrap other exceptions and some don't have a message at all - only a type.\n\nMost code I've seen logs an exception by using either getMessage() or toString(). But these methods don't always capture all the information needed to pinpoint the problem - other methods such as getCause() and getStackTrace() sometimes provide additional info.\n\nFor example, the exception I'm looking at right now in my Eclipse Inspect window is an InvocationTargetException. The exception itself has no cause, no message, no stacktrace ... but the target from getCause() is InvalidUseOfMatchersException, with these details populated.\n\nSo my question is: Given an exception of any type as an input, please provide a single method that will output a nicely formatted string containing all relevant information about the Exception (e.g. possibly recursively calling getCause() amongst other things?) Before posting, I was nearly going to have a stab at it myself but really don't want to reinvent the wheel - surely such a thing must have been done many times before...?"],
+        "responses":[ "import java.util.logging.Level;\nimport java.util.logging.Logger;\n\n[...]\n\nLogger logger = Logger.getAnonymousLogger();\nException e1 = new Exception();\nException e2 = new Exception(e1);\nlogger.log(Level.SEVERE, \"an exception was thrown\", e2);\nWill log:\n\nSEVERE: an exception was thrown\njava.lang.Exception: java.lang.Exception\nat LogStacktrace.main(LogStacktrace.java:21)\nCaused by: java.lang.Exception\nat LogStacktrace.main(LogStacktrace.java:20)"]
+    },
+    {
+        "tag": "EvaluationError",
+        "patterns": ["I'm using TypeScript for a reasonably large project, and am wondering what the standard is for the use of Errors. For example, say I hand an index out of bounds exception in Java:\n\nthrow new IndexOutOfBoundsException();\nWould the equivalent statement in TypeScript be:\n\nthrow new Error(\"Index Out of Bounds\");\nWhat other ways could I accomplish this? What is the accepted standard?"],
+        "responses": ["EvalError --- Creates an instance representing an error that occurs regarding the global function eval().\n\nInternalError --- Creates an instance representing an error that occurs when an internal error in the JavaScript engine is thrown. E.g. \"too much recursion\".\n\nRangeError --- Creates an instance representing an error that occurs when a numeric variable or parameter is outside of its valid range.\n\nReferenceError --- Creates an instance representing an error that occurs when de-referencing an invalid reference.\n\nSyntaxError --- Creates an instance representing a syntax error that occurs while parsing code in eval().\n\nTypeError --- Creates an instance representing an error that occurs when a variable or parameter is not of a valid type.\n\nURIError --- Creates an instance representing an error that occurs when encodeURI() or decodeURI() are passed invalid parameters."]
+    },
+    {
+        "tag": "RecoverableCode",
+        "patterns": ["I havea few questions regarding exceptions in java:\n\nWhat is java exception?\n\nIs an exception considered an error?\n\nWhen should I throw exceptions?\n\nHow many kind of exceptions?\n\nJavaexception"],
+        "responses": ["A signal that something failed in the code, but which is programmatically recoverable.\n\nDepends on how you interprets \"error\". This is ambiguous.\n\nWhen you want to signal that something failed in the code, but which is programmatically recoverable.\n\nCountless. You can namely also create custom ones."]
+    },
+    {
+        "tag": "AccessDenied",
+        "patterns": ["I have the following code where I need to catch AccessDeniedException exception\n\nimport java.io.PrintWriter;\nimport java.io.IOException;\nimport java.nio.file.AccessDeniedException;\n\nclass MyFileClass {\npublic void write()\nthrows IOException\n{\nPrintWriter out = new PrintWriter(\"sample.txt\");\n\nout.printf(\"%8.2f\\n\", 3.4);\n\nout.close();\n\n}\n}\n\npublic class MyClass {\npublic static void main(String[] args)\nthrows Exception\n{\ntry {\nMyFileClass mf = new MyFileClass();\nmf.write();\n} catch (AccessDeniedException e) {\nprint(\"Access denided\");\n}\ncatch (FileNotFoundException e) {\nprint(\"File not found\");\n}\n}\n}\nIn case sample.txt is read only, I get output as \"file not found\" rather \"Access denided\". I would like to understand what is the reason for this? Also, is the above structure for catching AccessDeniedException correct?"],
+        "responses": ["AccessDeniedException is only thrown by the new file API; the old file API (which you use with this PrintWriter constructor) only knows how to throw FileNotFoundException even if the real filesystem-level problem is not \"the file does not exist\".\n\nYou have to use the new API to open an output stream to the destination file; then you can have meaningful exceptions:\n\n// _will_ throw AccessDeniedException on access problems\nfinal OutputStream out = Files.newOutputStream(Paths.get(filename));\nfinal PrintWriter writer = new PrintWriter(out);\nMore generally, the new file API defines FileSystemException (inheriting IOException), which all new, meaningful exceptions defined by the new API inherit.\n\nThis means among other things that you can clearly separate, in catch clauses, what is caused by filesystem-level errors and \"real\" I/O errors, which you can't do with the old API:\n\ntry {\n// some new file API operation\n} catch (FileSystemException e) {\n// deal with fs error\n} catch (IOException e) {\n// deal with I/O error\n}"]
+    },
+    {
+        "tag": "BiffFile",
+        "patterns":[ "When I tried to read an Excel file in Java it throws \"biff exception\".\n\nWhat does this mean? I tried to Google it but wasn't able to find a proper explanation.\n\njxl.read.biff.BiffException: Unable to recognize OLE stream\n\nat jxl.read.biff.CompoundFile.<init>(CompoundFile.java:116)\n\nat jxl.read.biff.File.<init>(File.java:127)\n\nat jxl.Workbook.getWorkbook(Workbook.java:221)\n\nat jxl.Workbook.getWorkbook(Workbook.java:198)\n\nat Com.Parsing.ExcelFile.excel(Extract.java:20)\n\nat Com.Parsing.Extract.main(Extract.java:55)"],
+        "responses": ["Exception thrown when reading a biff file.\n\nThis exception has a number of messages that should provide some information about the cause:\n\nexcelFileNotFound \nexcelFileTooBig \nexpectedGlobals \npasswordProtected \nstreamNotFound \nunrecognizedBiffVersion\nunrecognizedOLEFile"]
+    },
+    {
+        "tag": "ThrowingException",
+        "patterns":[ "I don't know, why you need to throw exception in java. I can just evaluate the return value. Here is an example:\n\nint logic(int i){\nswitch(i){\ncase 0:\nreturn 0;\ncase 1:\nreturn 1;\ndefault:\nthrow new Exception();\n// return -1;\n}\n}"],
+        "responses":[ "Throwing an exception, in suitable cases, has several advantages:\n\nIn some cases every possible value of the return type is a meaningful result. There is no spare value to use to represent an error.\n\nAn exception can convey a lot more information. It can include a message explaining what went wrong.\n\nCatching exceptions can be done for a block of code. Testing return values has to be done after every call, cluttering the code.\n\nAn exception can be passed up the call stack to a method that can better report or process it than the immediate caller."]
+    },
+    {
+        "tag": "AutoUnboxing",
+        "patterns":[ "How to convert a Long value into an Integer value in Java?"],
+        "responses":[ "// auto-unboxing does not go from Long to int directly, so\nInteger i = (int) (long) theLong;"]
+    },
+    {
+        "tag": "ForLoop",
+        "patterns": ["My java code throws Exception in thread \"main\" java.lang.ArrayIndexOutOfBoundsException?? The code looks like this. It is written in java. The IDE used is Eclipse.\n\npackage week5;\n\nimport java.util.*;\nimport java.lang.Math;\n\npublic class DecimalToHex {\n\npublic static void main(String[] args) {\nScanner sn=new Scanner(System.in);\nSystem.out.println(\"--Enter Hexadecimal Number--\");\nString hex=sn.next();\nConvertHexaToDec(hex.toUpperCase());\nsn.close();\n}\n\npublic static void ConvertHexaToDec(String hex)\n{\nString hexChar=\"0123456789ABCDEF\";\nint[] eachChar=new int[hex.length()];\nint finalDeci=0;\nfor(int i=0;i<hex.length();i++)\n{\neachChar[i]=hexChar.indexOf(hex.charAt(i));\n}\nfor(int i:eachChar)\n{\nfinalDeci=finalDeci+eachChar[i]*((int)Math.pow(10, i));\n}\nSystem.out.println(\"Decimal Value Is \"+finalDeci);\n\n\n}\n\n}\nMy java code throws Exception in thread \"main\" java.lang.ArrayIndexOutOfBoundsException?? And the error shows.\n\nException in thread \"main\" java.lang.ArrayIndexOutOfBoundsException: 10\nat week5.DecimalToHex.ConvertHexaToDec(DecimalToHex.java:27)\nat week5.DecimalToHex.main(DecimalToHex.java:12)"],
+        "responses":[ "for(int i:eachChar)\n{\nfinalDeci=finalDeci+eachChar[i]*((int)Math.pow(10, i));\n}\nHere i has already value of eachChar[i], because you are using for-each loop instead of indexed for loop."]
+    },
+    {
+        "tag": "InventoryError",
+        "patterns": ["Total value of entire inventory is:$Exception in thread \"main\" java.util.MissingFormatArgumentException: Format specifier '%.2f'\n\ndouble total = 0.0;\n\nfor (int i = 0; i < 5; i++){\ntotal = total + products[i].getInventoryValue();\n}\n\nSystem.out.printf (\"Total value of entire inventory is:$%.2f\" + total);\nSystem.out.println ();\nArrays.sort (products);"],
+        "responses":[ "System.out.printf(\"Total value of entire inventory is:$%.2f\", total);\nThe first one concatenates the total with the string (to get a single longer string \"Total value of entire inventory is:$%.2f15.00\") and then uses that as the format string (with no argument to replace the %.2f)."]
+    },
+    {
+        "tag": "AnonymousError",
+        "patterns": ["How can I catch this kind of exception in java?\n\nthrow new Exception(\"Error\") {\n// Here is what makes the exception user-defined.\npublic String getMessage() {\nreturn \"Here is your user-defined exception!\";\n}\n};"],
+        "responses": ["What you have done is create an anonymous subclass of Exception. The only way you can catch it is to catch Exception.\n\nHint: what you are doing is pointless. User-defined exceptions are only useful if they are normal (not anonymous) classes. You have to be able to name them to catch them ... and if you cannot catch an exception (independently of its superclass) then it serves no purpose."]
+    },
+    {
+        "tag": "NoSuchElementException",
+        "patterns": ["To do this inside a function, I have to add throws MyException to the header of the function.\n\nAnd then anything that calls that function in turn must add throws MyException or have a try-catch block. But why is this?\n\nFor example, when creating a Stack in java and calling the pop function, I don't have to have a try-catch and yet the pop method in Java throws a NoSuchElementException (or w/e it is) if there isn't an element on the stack."],
+        "responses": ["NoSuchElementException is a RuntimeException (un-checked exception) and we don't need to handle or declare RuntimeExceptionS, thus the compiler wont complain, but instead throw it at runtime.\n\nIn the case of checked exceptions i.e., all the exceptions which are not subtypes of RuntimeException, the compiler will check for a suitable catch clause, enabling the program to continue its course of execution, after performing the operations within the catch; to do this, you need to handle them using try/catch blocks or declare them using the throws clause - delegating the responsibility of handling the exception higher up the call chain. If your custom exception is not a RuntimeException rules of checked exceptions apply to your custom exception as well."]
+    },
+    {
+        "tag": "TypeErasure",
+        "patterns":[ "In the code below we are asked what kind of problem the code below has. please correct me if I am wrong; compilation error : None; At compile time the erasure of type parameter has not still occurred and the dynamic binding has not been taken place, so the parameter passed to the method which is of type SQLException is thought of as Exception in the method 'pleaseThrow' and it(i mean Exception not SQLException) is cast to Runtime Exception in the method with no error. The only error is that we don't have a proper catch clause to catch the exception.\n\npublic class Exption<T extends Exception> {\npublic static void main(String[] args) {\ntry {\nnew Exption<RuntimeException>().pleaseThrow(new SQLException());\n}catch (final SQLException ex){\nex.printStackTrace();\n}\n}\nprivate void pleaseThrow(final Exception t) throws T{\nthrow (T)t;\n}\n}\nif we replace the catch clause with this:\n\ncatch(final RuntimeException e){\ne.printStackTrace();\nSystem.err.println(\"caught\");\n}\nthe exception will be caught but the System.err.println(\"caught\") will never be printed!!! What is the problem????"],
+        "responses": ["This is due to type erasure. In java after compilation, every generic information is lost (there is something left, which is not relevant to this though). That means that during compilation, the generic variable T is equal to RuntimeException. So your pleaseThrow code looks like this:\n\nprivate void pleaseThrow(final Exception t) throws RuntimeException{\nthrow (RuntimeException)t;\n}\nAfter compilation though, every generic parameter is erased to the base type. In your case, to Exception. Which leaves you with a method signature like this:\n\nprivate void pleaseThrow(final Exception t) throws Exception{\nthrow (Exception)t;\n}\nWhich finally is clear, why your catch block is never reached. You're trying to catch RuntimeExceptions but what you're actually throwing is a checked exception. Which then propagates upwards and is finally caught by the JVM."]
+    },
+    {
+        "tag": "XXXException",
+        "patterns": ["public void func() throws XXXException { // throw exception to outer body ------ (2)\ntry {\n......\n} catch(XXXException ex) {\n// handle exception ------ (1)\n}\n}\nIn this condition, how you decide to choose (1) or (2)? Is there any principles in Java exception handling?"],
+        "responses":["f the code that calls the method that throws the exception can properly deal with the exception then it should catch it. If it cannot deal with the exception then it should throw it up.\n\nFor instance, if \"func\" is low-level networking code it should probably throws the exception rather than catch it. The code that ultimatly catches it should display an error message to the user (or whatever else makes sense). If instead \"func\" is part of the GUI layer it probably would catch the exception and display an error message to the user (or whatever else makes sense)."]
+    },
+    {
+        "tag": "KnapsackProblem",
+        "patterns": ["package knapsack3;\n\nimport java.util.Scanner;\n\n/** Class Knapsack **/\n\npublic class knapsack3\n{\n\n\npublic void solve(int wt[], int val[], int M, int n)\n{\nint nob = 25;\nint i,j;\nint v[][]=new int[nob][nob];\nfor(i=0;i<=n;i++)\n{\nfor(j=0;j<=M;j++)\n{\nif(i==0||j==0)\n{\nv[i][j]=0;\n}\nelse if(j-wt[i]<0)\n{\nv[i][j]=v[i-1][j];\n}\nelse\n{\nv[i][j]=Math.max(v[i-1][j],val[i]+v[i-1][j-wt[i]]);\n}\n}\n}\nSystem.out.println(\"\\n Final Profit(value)---> \"+v[n-1][M]);\n}\n/** Main function **/\npublic static void main (String[] args) \n{\nScanner scan = new Scanner(System.in);\nSystem.out.println(\"Knapsack Algorithm Test\\n\");\n\nknapsack3 ks = new knapsack3();\n\nSystem.out.println(\"Enter number of elements \");\nint n = scan.nextInt();\n\nint wt[] = new int[n + 1];\nint val[] = new int[n + 1];\n\nSystem.out.println(\"\\nEnter weight for \"+ n +\" elements\");\nfor (int i = 1; i <= n; i++)\nwt[i] = scan.nextInt();\n\nSystem.out.println(\"\\nEnter value for \"+ n +\" elements\");\nfor (int i = 1; i <= n; i++)\nval[i] = scan.nextInt();\n\nSystem.out.println(\"\\nEnter knapsack weight \");\nint M = scan.nextInt();\n\nks.solve(wt, val, M, n);\nscan.close();\n}\n\n}\nthe exception is\n\nException in thread \"main\" java.lang.ArrayIndexOutOfBoundsException: 25 at knapsack3.knapsack3.solve(knapsack3.java:22) at knapsack3.knapsack3.main(knapsack3.java:61)"],
+        "responses":[ "int nob = 25;\nint v[][]=new int[nob][nob];\nis hardcoded to size 25, but you then use a for-loop that goes to n and M (So if you enter a number for n or M larger than nob aka 25 then you will get an out of bounds exception.\n\nYour for-loops should always use the array in them like this\n\nfor(int i = 0; i < v.length; i++)\n{\nfor(int j = 0; j < v[i].length; j++){}\n}\nto avoid this issue.\n\nedit However, Your real issue, now that I re look at the question is that your for-loop does this:\n\nfor(int i = 0; i <= n; i++)\nIf you have i <= n starting at 0 you will run this loop 26 (not 25) times. Since I am assuming your n is 25 since you hard-coded nob to 25.\n\nAlso\n\nfor(int j = 0; j <= M; j++)\nmeans that you will go from 0 to M (Knapsack size) which I assume is almost always above 25, so this will always cause an out of bounds exception because you hard code the size of the array."]
+    },
+    {
+        "tag": "SpymemcachedError",
+        "patterns":[ "try {\n\nMemcachedClient client = new MemcachedClient(...);\n\nclient.set('name', 1000, 'some_name');\n\n}catch(Exception ex){\nSystem.out.println(\"Exception occurred\");\nSystem.out.println(ex.getMessage());\nex.printStackTrace();\n\nlogExceptionInDB(ex);\n}\nIn my scansion, my memcached machine is not running, so it is printing the following exception in console,\n\njava.net.ConnectException: Connection refused\nat sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)\nat sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:735)\nat net.spy.memcached.MemcachedConnection.handleIO(MemcachedConnection.java:369)\nat net.spy.memcached.MemcachedConnection.handleIO(MemcachedConnection.java:242)\nat net.spy.memcached.MemcachedConnection.run(MemcachedConnection.java:836)"],
+        "responses": ["You can't catch the exception mentioned in the post, as it was already catch by spymemcached itself, you can only see the log, the related code in MemcachedConnection.java is :\n\ncatch (ConnectException var5) {\nthis.getLogger().info(\"Reconnecting due to failure to connect to %s\", new Object[]{node, var5});\nthis.queueReconnect(node);\n}"]
+    },
+    {
+        "tag": "CustomException",
+        "patterns": ["class CustomException extends Exception {\n\npublic final static String _FAIL_TO_INSERT = \"FAIL_TO_INSERT\";\n\n}"],
+        "responses":[ "Just try catch:\n\ntry {\nthrow CustomException(\"optional\")\n} catch {\ncase c: CustomException =>\nc.printStackTrace\n}"]
+    },
+    {
+        "tag": "RelativeFileName",
+        "patterns": ["An exception has occured : java.io.FileNotFoundException: users/stefan/desktop/lol.xml (No such file or directory)\n\n// Salveaza toate obiectele create intr-un fisier\npublic void salveazaObiecteleCreate(String caleSpreFisier) {\n\nHashMap table = new HashMap();\n\ntable.put(\"Autorul\", numelePrenumeleAutorului);\ntable.put(\"Denumirea cartii\", denumireaCartii);\ntable.put (\"Culoarea cartii\",culoareaCartii);\ntable.put (\"Genul cartii \",gen);\ntable.put (\"Limba\",limba);\ntable.put (\"Numarul de copii\",numarulDeCopii);\ntable.put (\"Numarul de pagini\",numarulDePagini);\ntable.put (\"Pretul cartii\",pretulCartii);\n\ntry {\n\nFile file = new File(caleSpreFisier); \nFileOutputStream f = new FileOutputStream(file); \nObjectOutputStream s = new ObjectOutputStream(f); \ns.writeObject(table);\ns.close();\n\n} catch(Exception e){\n\nSystem.out.println(\"An exception has occured\"); \n} \n}\n\n\npublic Carte (String caleSpreFisier) {\n\n\nHashMap table = new HashMap();\n\nFile file = new File(caleSpreFisier); \n\n\ntry {\n\nFileInputStream f = new FileInputStream(file); \nObjectInputStream s = new ObjectInputStream(f); \ntable = (HashMap)s.readObject(); \ns.close();\n\n} catch(Exception e){\n\nSystem.out.println(\"An exception has occured : \"+e); \n}\n\nfor (Object key: table.keySet()) {\n\nSystem.out.println(table.get(key));\n}\n\n}\n\n// end of class"],
+        "responses": ["Note that it's \"users/stefan/[...]\" - it's a relative filename, so will be resolved relative to the current working directory. Are you sure you didn't mean \"/users/stefan/desktop/lol.xml\" with a leading slash to indicate an absolute filename"]
+    },
+    {
+        "tag": "ScannerException",
+        "patterns":[ "import java.util.Scanner;\n\npublic class Array {\n\npublic static void main(String[] args) {\nScanner sc = new Scanner(System.in);\nint size = sc.nextInt();\nint arr[] = new int[size];\nfor (int i = 0; i < size; i++) {\narr[i] = sc.nextInt();\n}\nint max = Integer.MIN_VALUE;\nint min = Integer.MAX_VALUE;\nfor (int i = 0; i < arr.length; i++) {\nif (arr[i] < min) {\nmin = arr[i];\n}\n}\nfor (int i = 0; i < arr.length; i++) {\nif (arr[i] > max) {\nmax = arr[i];\n}\n}\nSystem.out.println(\"Maximum value of array is : \" + max);\nSystem.out.println(\"Minimum value of array is : \" + min);\n}\n}\nWhen I compile this code it keeps going on until I terminate it and when done so it gives the exception:\n\nException in thread \"main\" java.util.InputMismatchException"],
+        "responses": ["Scanner sc = new Scanner(System.in);\nint size = sc.nextInt();\nSo when you terminate it, the input signal can not conver to int,thus the exception will thrown."]
+    },
+    {
+        "tag": "ElevatorFullException",
+        "patterns": ["(\"serial\")\npublic class ElevatorFullException extends Exception {\nB43 ElevatorFullException() { super(\"Elevator is Full\");}\n}\nThen use it in the program\n\npublic void boardPassenger( int destinationFloorNumber ) \nthrows ElevatorFullException \n{\nif ( passengerCount == CAPACITY )\n{\nthrow new ElevatorFullException();\n}\npassengerLeaving[destinationFloorNumber - 1] += 1; \nisDestination[destinationFloorNumber -1] = true;\npassengerCount += 1;\n}\nMy program ran fine without the exception , but one I add this exception it broke with this error below :\n\nException in thread \"main\" java.lang.Error: Unresolved compilation problem: Unhandled exception type ElevatorFullException"],
+        "responses": [""]
+    },
+    {
+        "tag": "ExtendingExcpetion",
+        "patterns": ["public class ElevatorFullException extends Exception {\nB:B ElevatorFullException() { super(\"Elevator is Full\");}\n}\nThen use it in the program\n\npublic void boardPassenger( int destinationFloorNumber ) \nthrows ElevatorFullException \n{\nif ( passengerCount == CAPACITY )\n{\nthrow new ElevatorFullException();\n}\npassengerLeaving[destinationFloorNumber - 1] += 1; \nisDestination[destinationFloorNumber -1] = true;\npassengerCount += 1;\n}\nMy program ran fine without the exception , but one I add this exception it broke with this error below :\n\nException in thread \"main\" java.lang.Error: Unresolved compilation problem: Unhandled exception type ElevatorFullException"],
+        "responses": ["try{\nboardPassenger(3);\n}\ncatch(ElevatorFullException ee){\n//do any processing you need when exception is thrown\n}\nIf main cannot be changed:\npublic void boardPassenger( int destinationFloorNumber ) {\ntry{\nif ( passengerCount == CAPACITY ) {\nthrow new ElevatorFullException();\n}\npassengerLeaving[destinationFloorNumber - 1] += 1; \nisDestination[destinationFloorNumber -1] = true;\npassengerCount += 1;\n}\ncatch (ElevatorFullException ee){\n//do any processing you need when exception is thrown\n} }"]
+    },
+    {
+        "tag": "InvokingConstructor",
+        "patterns": ["I'm trying to define my own exception class the easiest way, and this is what I'm getting:\n\npublic class MyException extends Exception {}\n\npublic class Foo {\npublic bar() throws MyException {\nthrow new MyException(\"try again please\");\n}\n}\nThis is what Java compiler says:\n\ncannot find symbol: constructor MyException(java.lang.String)"],
+        "responses": ["Typically you use super(message) in your constructor to invoke your parent constructor. For example, like this:\n\npublic class MyException extends Exception {\npublic MyException(String message) {\nsuper(message);\n}\n}"]
+    },
+    {
+        "tag": "PrintSTream",
+        "patterns": ["I need to capture the exception in a text file in Java. For example:\n\ntry {\nFile f = new File(\"\");\n}\ncatch(FileNotFoundException f) {\nf.printStackTrace(); // instead of printing into console it should write into a text file \nwritePrintStackTrace(f.getMessage()); // this is my own method where I store f.getMessage() into a text file.\n}\nUsing getMessage() works, but it only shows the error message. I want all the information in the printStackTrace() including line numbers.\n\njavaexception"],
+        "responses": ["It accepts a PrintStream as a parameter; see the documentation.\n\nFile file = new File(\"test.log\");\nPrintStream ps = new PrintStream(file);\ntry {\n// something\n} catch (Exception ex) {\nex.printStackTrace(ps);\n}\nps.close();"]
+    },
+    {
+        "tag": "EmptyException",
+        "patterns": ["How can I check whether a string is not null and not empty?\n\npublic void doStuff(String str)\n{\nif (str != null && str != \"**here I want to check the 'str' is empty or not**\")\n{\n/* handle empty string */\n}\n/* ... */\n}"],
+        "responses":[ "if(str != null && !str.isEmpty())\nBe sure to use the parts of && in this order, because java will not proceed to evaluate the second part if the first part of && fails, thus ensuring you will not get a null pointer exception from str.isEmpty() if str is null.\n\nBeware, it's only available since Java SE 1.6. You have to check str.length() == 0 on previous versions."]
+    },
+    {
+        "tag": "SubclassCalling",
+        "patterns": ["Is there any way to throw an Exception while using a consumer in java 8?\n\nFor example:\n\nprivate void fooMethod(List<String> list) throws Exception {\n\nlist.forEach(element->{\nif(element.equals(\"a\")) {\nthrow new Exception(\"error!\");\n}\n});\n\n}\nThis gives me a compiler error saying: Unhandled exception type Exception\n\nWhat is the correct way to throw an exception in this case?"],
+        "responses":[ "Since Exception and its subclass (other than RuntimeException) are checked Exception and in lambda, you can't throw checked exception. Hence you should use RuntimeException:\n\nprivate void fooMethod(List<String> list) throws Exception {\nlist.forEach(element->{\nif(element.equals(\"a\")) {\nthrow new RuntimException(\"error!\");\n}\n});\n}"]
+    },
+    {
+        "tag": "SetUncaughtException",
+        "patterns": ["Thread.setUncaughtExceptionHandler(this);\nNow, I would like to test this functionality - how can I generate an unhandled exception in the run() method of my worker object?"],
+        "responses": ["public class RuntimeTest\n{\npublic static void main(String[] a)\n{\nThread t = new Thread()\n{\npublic void run()\n{\nthrow new RuntimeException(\"Testing unhandled exception processing.\");\n}\n};\nt.setUncaughtExceptionHandler(new Thread.UncaughtExceptionHandler()\n{\npublic void uncaughtException(Thread t, Throwable e)\n{\nSystem.err.println(t + \"; \" + e);\n}\n});\nt.start();\n}\n}\nShare\nImprove this answer\nFollow"]
+    },
+    {
+        "tag": "ExpectedWrapUpCode",
+        "patterns": ["We use JUnit 3 at work and there is no ExpectedException annotation. I wanted to add a utility to our code to wrap this:\n\ntry {\nsomeCode();\nfail(\"some error message\");\n} catch (SomeSpecificExceptionType ex) {\n}\nSo I tried this:\n\npublic static class ExpectedExceptionUtility {\npublic static <T extends Exception> void checkForExpectedException(String message, ExpectedExceptionBlock<T> block) {\ntry {\nblock.exceptionThrowingCode();\nfail(message);\n} catch (T ex) {\n}\n}\n}\nHowever, Java cannot use generic exception types in a catch block, I think.\n\nHow can I do something like this, working around the Java limitation?\n\nIs there a way to check that the ex variable is of type T?"],
+        "responses": ["You could pass the Class object in and check that programatically.\n\npublic static <T extends Exception> void checkForException(String message, \nClass<T> exceptionType, ExpectedExceptionBlock<T> block) {\ntry {\nblock.exceptionThrowingCode();\n} catch (Exception ex) {\nif ( exceptionType.isInstance(ex) ) {\nreturn;\n} else {\nthrow ex; //optional?\n}\n}\nfail(message);\n}\n\n//...\ncheckForException(\"Expected an NPE\", NullPointerException.class, //...\nI'm not sure if you'd want the rethrow or not; rethrowing would equally fail/error the test but semantically I wouldn't, since it basically means \"we didn't get the exception we expected\" and so that represents a programming error, instead of a test environment error."]
+    },
+    {
+        "tag": "TypeConvert",
+        "patterns":[ "the data type used should be boolean not an int"],
+        "responses":[ "the if statement condition you might have used = instead of =="]
+    },
+    {
+        "tag": "InvalidDeclaration",
+        "patterns": ["invalid method declaration"],
+        "responses": ["return type of the method is missing"]
+    },
+    {
+        "tag": "StaticToNonStatic",
+        "patterns": ["unable to modify declared values in nested loop"],
+        "responses": ["try using static methods and variables during declaration"]
+    },
+    {
+        "tag": "HighMemory",
+        "patterns": ["insufficient memory"],
+        "responses": ["try to use a large memory data type like long long to store excess value"]
+    },
+    {
+        "tag": "ClassFileNotFound",
+        "patterns": ["No class def found error"],
+        "responses": ["the path you are giving donot contain the class file created"]
+    },
+    {
+        "tag": "Overridding",
+        "patterns": ["error while converting object to string"],
+        "responses": ["use overridding to decrease the chance of getting error"]
+    },
+    {
+        "tag": "StackTraceException",
+        "patterns": ["forcing a stack trace"],
+        "responses":[ "use exception .printStackTrace to identify the main cause of error"]
+    },
+    {
+        "tag": "SuperClass",
+        "patterns": ["super cannot be used where you're using it"],
+        "responses": ["you might need to call some superclass methods from your subclasses, which is what the keyword is for"]
+    },
+    {
+        "tag": "AbstractProperties",
+        "patterns": ["super cannot be used where you're using it"],
+        "responses": ["make use of abstract class and its properties"]
+    },
+    {
+        "tag": "AbstractclassAndInterface",
+        "patterns": ["error while abstract class implementing method of interface"],
+        "responses": ["When an abstract class implements an interface, it\u0092s not required to override methods of the super interface. But the first non-abstract class in the inheritance tree must override the methods."]
+    },
+    {
+        "tag": "OverriddingDefinedMethod",
+        "patterns": ["unable to override a defined method in class"],
+        "responses": ["only inherited methods can be overridden"]
+    },
+    {
+        "tag": "CallingFUnction",
+        "patterns": ["unable to print and return the value from inherited class method"],
+        "responses": ["the calling function and called functions return type may not be same"]
+    },
+    {
+        "tag": "ProtectedOrPrivate",
+        "patterns": ["cannot access value from overridden method"],
+        "responses": ["mostly the overidden class must be either protected or public"]
+    },
+    {
+        "tag": "VaryingArguments",
+        "patterns": ["unable to use the constructor for dynamic polymorphism"],
+        "responses": ["constructors cannot be overridden as they are not methods and may vary in arguments"]
+    },
+    {
+        "tag": "HidingException",
+        "patterns": ["though accessing value from static method ,variable value from another static method is stored"],
+        "responses": ["due to the property of hiding static method in subclass gets hid by static method in superclass"]
+    },
+    {
+        "tag": "SynchronisedModifiers",
+        "patterns": ["do the synchronised modifiers have any effect on overridding"],
+        "responses": ["No ,synchronised method can override a non synchronised method and vice-versa"]
+    },
+    {
+        "tag": "FPStrictMethod",
+        "patterns": ["do the strictfp have any effect on overridding"],
+        "responses":[ "No ,FP strict method can override a non synchronised method and vice-versa"]
+    },
+    {
+        "tag": "MultipleInterfaces",
+        "patterns": ["unable to implement multiple interface using two parent interfaces"],
+        "responses":[ "though technically possible ,your java version may not support such inheritance,Try with one class and one interface"]
+    },
+    {
+        "tag": "REcordsUndefined",
+        "patterns":[ "unable to access the value of a variable 'record'"],
+        "responses": ["record' cannot be used as variable as it is a keyword in java"]
+    },
+    {
+        "tag": "AssertKeyword",
+        "patterns":[ "unable to access the value of a variable 'assert'"],
+        "responses":[ "assert cannot be used as variable as it is a keyword in java"]
+    },
+    {
+        "tag": "Yielding",
+        "patterns": ["unable to access the value of a variable 'yield'"],
+        "responses": ["yield in used in looping statements"]
+    },
+    {
+        "tag": "FlowStatements",
+        "patterns":[ "unable to stop the flow in switch statements"],
+        "responses":[ "use break to come out of switch case or continue keyword for goin to top of loop"]
+    },
+    {
+        "tag": "IndividualCharacters",
+        "patterns": ["unable to compare the individual characters from string"],
+        "responses": ["use ' ' instead of \" \" for denoting character or pointer"]
+    },
+    {
+        "tag": "PrivateMethods",
+        "patterns":[ "unable to access variables from a well defined class"],
+        "responses": ["perhaps ,the data members are defined in private mode or not declared while object creation"]
+    },
+    {
+        "tag": "AccessibleProtectedclassses",
+        "patterns": ["cannot print values from functions under protected mode"],
+        "responses": ["When a member of a class is marked as protected, it is accessible by only classes in the same package or by a subclass in different package."]
+    },
+    {
+        "tag": "AccessModifiers",
+        "patterns": ["not being to operate on user built class"],
+        "responses":[ "forgot to specify access modifiers which make them private by default"]
+    },
+    {
+        "tag": "CopyOfRange",
+        "patterns": ["copyOfRange() is not working for the array"],
+        "responses": ["the size of array may be too large to the range or using type conversion while using"]
+    },
+    {
+        "tag": "ImportingPackagesBuiltIn",
+        "patterns": ["unable to copy the array with built-in function arraycopy"],
+        "responses":[ "forgot to import package java.util.*"]
+    },
+    {
+        "tag": "ForgettingPackages",
+        "patterns":[ "scanner class not found"],
+        "responses": ["check case sensitivity or forgot to import package"]
+    },
+    {
+        "tag": "CreatingNewInstances",
+        "patterns": ["unable to declare variable in interface"],
+        "responses":[ "interface cannot be used or applicable for creating instance variables"]
+    },
+    {
+        "tag": "DefaultErrors",
+        "patterns": ["final method declared not working when implemented in a new class"],
+        "responses":[ "the interface can have only static and default methods for usage"]
+    },
+    {
+        "tag": "SubclassConstructor",
+        "patterns":[ "error while calling subclass constructor"],
+        "responses":[ "subclass constructor can call super class constructor using super keyword but vice versa cannot be happend"]
+    },
+    {
+        "tag": "StaticInitialisation",
+        "patterns": ["unable to use methods from subclass"],
+        "responses": ["Constructor, Static initialization block (SIB), and Instance initialization block (IIB) of the superclass cannot be inherited to its subclass but they are executed while creating an object of the subclass"]
+    },
+    {
+        "tag": "MultipleExceptionErrors",
+        "patterns": ["cannot inherit two parent class with one class"],
+        "responses": ["java do not support multiple inheritance ,interfaces are used"]
+    },
+    {
+        "tag": "RelationshipBuilding",
+        "patterns": ["unable to access data members of foreign classes"],
+        "responses":[ "use is-a relationship.Building hierarchical relationships between related classes is called is -a relationship"]
+    },
+    {
+        "tag": "MavenVersion",
+        "patterns":[ "unable to use maven in spring boot project creation"],
+        "responses":[ "check for maven version . If not present use mvn install command and create folder"]
+    },
+    {
+        "tag": "TrackingModes",
+        "patterns": ["Error: Caused by: org.hibernate.hql.internal.ast.QuerySyntaxException: unexpected token: * near line 1, column 8 [SELECT * FROM com.jsession4d.reactivedemo.User WHERE id = :id]"],
+        "responses": ["add tracking modes property to application.yml"]
+    },
+    {
+        "tag": "NativeCommand",
+        "patterns":[ "Error: Caused by: org.hibernate.hql.internal.ast.QuerySyntaxException: unexpected token: * near line 1, column 8 [SELECT * FROM com.jsession4d.reactivedemo.User WHERE id = :id]"],
+        "responses":[ "mark the command as native command"]
+    },
+    {
+        "tag": "ClosingParenthesis",
+        "patterns": ["\u0093\u0085 expected\u0094"],
+        "responses": ["This error occurs when something is missing from the code. Often this is created by a missing semicolon or closing parenthesis."]
+    },
+    {
+        "tag": "UnclosedStringLiteral",
+        "patterns": ["\u0093unclosed string literal\u0094"],
+        "responses": ["The \u0093unclosed string literal\u0094 error message is created when the string literal ends without quotation marks and the message will appear on the same line as the error."]
+    },
+    {
+        "tag": "IllegalExpression",
+        "patterns":[ "\u0093illegal start of an expression\u0094"],
+        "responses": ["There are numerous reasons why an \u0093illegal start of an expression\u0094 error occurs. It ends up being one of the less-helpful error messages. Some developers say it\u0092s caused by bad code. Usually, expressions are created to produce a new value or assign a value to a variable. The compiler expects to find an expression and cannot find it because the syntax does not match expectations."]
+    },
+    {
+        "tag": "CannotFindSymbol",
+        "patterns":[ "\u0093cannot find symbol\u0094"],
+        "responses": ["This is a very common issue because all identifiers in Java need to be declared before they are used. When the code is being compiled, the compiler does not understand what the identifier means."]
+    },
+    {
+        "tag": "ConsistencyInFileAndClass",
+        "patterns":[ "\u0093public class XXX should be in file\u0094"],
+        "responses": ["To fix this issue: Name the class and file the same.\nMake sure the case of both names is consistent."]
+    },
+    {
+        "tag": "IncompatibleTypes",
+        "patterns": ["\u0093incompatible types\u0094"],
+        "responses": ["\u0093Incompatible types\u0094 is an error in logic that occurs when an assignment statement tries to pair a variable with an expression of types. It often comes when the code tries to place a text string into an integer \u0097 or vice versa."]
+    },
+    {
+        "tag": "MethodDeclaration",
+        "patterns": ["\u0093invalid method declaration; return type required\u0094"],
+        "responses": ["There are a few ways to trigger the \u0093invalid method declaration; return type required\u0094 error:\n\nForgetting to state the type\nIf the method does not return a value then \u0093void\u0094 needs to be stated as the type in the method signature.\nConstructor names do not need to state type. But if there is an error in the constructor name, then the compiler will treat the constructor as a method without a stated type."]
+    },
+    {
+        "tag": "ReturnStatements",
+        "patterns": ["\u0093missing return statement\u0094"],
+        "responses": ["The \u0093missing return statement\u0094 message occurs when a method does not have a return statement. Each method that returns a value (a non-void type) must have a statement that literally returns that value so it can be called outside the method."]
+    },
+    {
+        "tag": "Precision",
+        "patterns": ["\u0093possible loss of precision\u0094"],
+        "responses": ["\u0093Possible loss of precision\u0094 occurs when more information is assigned to a variable than it can hold. If this happens, pieces will be thrown out. If this is fine, then the code needs to explicitly declare the variable as a new type.\n\nA \u0093possible loss of precision\u0094 error commonly occurs when:\n\nTrying to assign a real number to a variable with an integer data type.\nTrying to assign a double to a variable with an integer data type."]
+    },
+    {
+        "tag": "MissingCurlyBraces",
+        "patterns": ["\u0093reached end of file while parsing\u0094"],
+        "responses":[ "This error message usually occurs in Java when the program is missing the closing curly brace (\u0093}\u0094). Sometimes it can be quickly fixed by placing it at the end of the code."]
+    },
+    {
+        "tag": "UnreachableStatements",
+        "patterns": ["\u0093unreachable statement\u0094"],
+        "responses": ["\u0093Unreachable statement\u0094 occurs when a statement is written in a place that prevents it from being executed. Usually, this is after a break or return statement."]
+    },
+    {
+        "tag": "LocalVariables",
+        "patterns": ["\u0093variable <X> might not have been initialized\u0094"],
+        "responses": ["This occurs when a local variable declared within a method has not been initialized. It can occur when a variable without an initial value is part of an if statement"]
+    },
+    {
+        "tag": "Operation",
+        "patterns": ["\u0093Operator .. cannot be applied to <X>\u0094"],
+        "responses": ["This often happens when the Java code tries to use a type string in a calculation. To fix it, the string needs to be converted to an integer or float."]
+    },
+    {
+        "tag": "InconvertibleTypes",
+        "patterns": ["\u0093inconvertible types\u0094"],
+        "responses": ["The \u0093inconvertible types\u0094 error occurs when the Java code tries to perform an illegal conversion."]
+    },
+    {
+        "tag": "MessageReturnType",
+        "patterns": ["\u0093missing return value\u0094"],
+        "responses":[ "You\u0092ll get the \u0093missing return value\u0094 message when the return statement includes an incorrect type."]
+    },
+    {
+        "tag": "VoidMethods",
+        "patterns": ["\u0093cannot return a value from method whose result type is void\""],
+        "responses": ["This Java error occurs when a void method tries to return any value, such as in the"]
+    },
+    {
+        "tag": "NonStaticVariables",
+        "patterns": ["\u0093non-static variable . . . cannot be referenced from a static context\u0094"],
+        "responses": ["To fix the \u0093non-static variable . . . cannot be referenced from a static context\u0094 error, try these two things:\n\nDeclare the variable as static in the signature.\nCheck on the code as it can create an instance of a non-static object in the static method."]
+    },
+    {
+        "tag": "NonReferenceActions",
+        "patterns":[ "\u0093non-static method . . . cannot be referenced from a static context\u0094"],
+        "responses": ["This issue occurs when the Java code tries to call a non-static method in a non-static"]
+    },
+    {
+        "tag": "InitialsedVariablesError",
+        "patterns": ["\u0093(array) <X> not initialized\u0094"],
+        "responses": ["You\u0092ll get the \u0093(array) <X> not initialized\u0094 message when an array has been declared but not initialized. Arrays are fixed in length so each array needs to be initialized with the desired length."]
+    },
+    {
+        "tag": "DataStreamError",
+        "patterns": ["\u0093broken pipe\u0094"],
+        "responses":[ "This error message refers to the data stream from a file or network socket that has stopped working or is closed from the other end"]
+    },
+    {
+        "tag": "JVM",
+        "patterns": ["\u0093could not create Java Virtual Machine\u0094"],
+        "responses": ["This Java error message usually occurs when the code tries to invoke Java with the wrong arguments"]
+    },
+    {
+        "tag": "WrongClass",
+        "patterns": ["\u0093class file contains wrong class\u0094"],
+        "responses": ["The \u0093class file contains wrong class\u0094 issue occurs when the Java code tries to find the class file in the wrong directory"]
+    },
+    {
+        "tag": "CastingObject",
+        "patterns": ["\u0093ClassCastException\u0094"],
+        "responses": ["The \u0093ClassCastException\u0094 message indicates the Java code is trying to cast an object to the wrong class."]
+    },
+    {
+        "tag": "LineBreaking",
+        "patterns": [";' expected"],
+        "responses": ["Syntax mistake, missing line breaking ; at specified line number"]
+    },
+    {
+        "tag": "PublicMainMethod",
+        "patterns": ["error: cannot find symbol public static void main(string []a)"],
+        "responses":[ "comiler could not find the main method signature for starting the execution, in the declared class system could not recognize the symbol string, where String class Sis capital"]
+    },
+    {
+        "tag": "nameAndSavesSourceFile",
+        "patterns":[ "Error: Could not find or load main class a"],
+        "responses": ["check the class name which u want to execute, class name and saved source file name should be same, so that while executing there will be no confusion to the programmer"]
+    },
+    {
+        "tag": "Conditions",
+        "patterns":[ "Exception in thread \"main\" java.lang.ArithmeticException:"],
+        "responses":[ "thrown when an exceptional condition has occurred in an arithmetic operation."]
+    },
+    {
+        "tag": "ExceptionInThread",
+        "patterns":[ "Exception in thread \"main\" java.lang.ArrayIndexOutOfBoundsException:"],
+        "responses": ["exception that is automatically thrown by the JRE(Java Runtime Environment) when a program incorrectly tries to access a certain location in a set that is non-existent. exception occurs when we want to access array more than its size"]
+    },
+    {
+        "tag": "UnavailabilityOfClass",
+        "patterns":[ "Exception in thread \"main\" java.lang.SQLException:"],
+        "responses":[ "Exception raised when there is unavailabilty of class releated to JDBC Connectivity statements"]
+    },
+    {
+        "tag": "FileNotFoundError",
+        "patterns": ["Exception in thread \"main\" java.lang.FileNotFoundException:"],
+        "responses": ["Exception is raised when a file is not accessible or does not open."]
+    },
+    {
+        "tag": "IOException",
+        "patterns": ["Exception in thread \"main\" java.lang.IOException:"],
+        "responses":[ "It is thrown when an input-output operation failed or interrupted"]
+    },
+    {
+        "tag": "ClassFileNotFoundException",
+        "patterns": ["Exception in thread \"main\" java.lang.ClassNotFoundException:"],
+        "responses":[ "Exception is raised when we try to access a class whose definition is not found."]
+    },
+    {
+        "tag": "NumberFormatException",
+        "patterns": ["Exception in thread \"main\" java.lang.NumberFormatException:"],
+        "responses":[ "exception is thrown when forcefully string is been converted to numeric value but the format of the input string is not supported. For example, parsing a string to an integer where NULL is assigned in the string throwing unchecked exceptions."]
+    },
+    {
+        "tag": "NummPointer",
+        "patterns":["Exception in thread \"main\" java.lang.NullPointerException:"],
+        "responses":[ "exception thrown by the JVM when the program tries to call a method on the null object or perform other operations on a null object."]
+    },
+    {
+        "tag": "InvalidArguments",
+        "patterns":[ "Exception in thread \"main\" java.lang. InvalidArgumentException:"],
+        "responses":["exception raised when an invalid parameter is passed to a certain method on the server\u0092s referenced connection."]
+    },
+    {
+        "tag": "IllegalArguments",
+        "patterns": ["Exception in thread \"main\" java.lang. IllegalArgumentException:"],
+        "responses": ["It is thrown to indicate that an array has been accessed with an illegal index. The index is either negative or greater than or equal to the size of the array."]
+    },
+    {
+        "tag": "StackOverFlowError",
+        "patterns": ["Exception in thread \"main\" java.lang.StackOverFlowError:"],
+        "responses":[ "StackOverflowError is an error that Java doesn\u0092t allow to catch, for instance, a stack running out of space, as it\u0092s one of the most common runtime errors one can encounter."]
+    },
+    {
+        "tag": "InterruptedException",
+        "patterns": ["Exception in thread \"main\" java.lang.InterruptedException:"],
+        "responses": ["It is thrown when a thread is waiting, sleeping, or doing some processing, and it is interrupted."]
+    },
+    {
+        "tag": "NoSuchMethodException",
+        "patterns": ["Exception in thread \"main\" java.lang.NoSuchMethodException:"],
+        "responses": ["exception is raised when referring to the members of a null object. Null represents nothing"]
+    },
+    {
+        "tag": "StringIndexError",
+        "patterns": ["Exception in thread \"main\" java.lang.StringIndexOutOfBoundsException :"],
+        "responses": ["It is thrown by String class methods to indicate that an index is either negative than the size of the string."]
+    },
+    {
+        "tag": "ClassCastException",
+        "patterns": ["Exception in thread \"main\" java.lang.ClassCastException :"],
+        "responses": ["any child objects can be casted to parent Object, but Object cannot be casted"]
+    },
+    {
+        "tag": "NOClassDef",
+        "patterns": ["Exception in thread \"main\" java.lang.NoClassDefFoundError :"],
+        "responses": ["calling the class file while runtime which does not exists throws NoClassDefFoundError"]
+    },
+    {
+        "tag": "SurroundingByTryBlock",
+        "patterns": ["Exception in thread \"main\" java.lang.ExceptionInInitializerError"],
+        "responses": ["the statements which might throw/raise exception are not in method body or not surrounded by try"]
+    },
+    {
+        "tag": "ExplicitError",
+        "patterns": ["Exception in thread \"main\" java.lang.IllegalThreadStateException"],
+        "responses": ["exception rises explicitly either by programmer or by API developer to indicate that a method has been invoked at wrong time."]
+    },
+    {
+        "tag": "APIError",
+        "patterns": ["Exception in thread \"main\" java.lang.AssertionError"],
+        "responses":[ "exception rises explicitly by the programmer or by API developer to indicate that assert statement fails."]
+    },
+    {
+        "tag": "LoopError",
+        "patterns": ["Type mismatch: cannot convert from int to boolean\nSyntax error, insert \") Statement\" to complete WhileStatement\nSyntax error, insert \">\" to complete ReferenceType1\nSyntax error, insert \"VariableDeclarators\" to complete LocalVariableDeclaration\nSyntax error on token \")\", ; expected"],
+        "responses": ["syntax error instead of for loop when we use while"]
+    },
+    {
+        "tag": "ClassandFileName",
+        "patterns": ["error: cannot find symbol\nrobot firstRobot = new Robot(34,51,\"yossi\");"],
+        "responses":[ "should be declared in a file named Robot.java"]
+    },
+    {
+        "tag": "Datatypes",
+        "patterns":[ "Exception in thread \"main\" java.lang.Error: Unresolved compilation problem: \nThe constructor sleep(int, int) is undefined"],
+        "responses": ["we need to enter same datatypes which we mentioned in constructor"]
+    },
+    {
+        "tag": "OpenParenthesis",
+        "patterns": ["error: '(' expected\nif{tos==stk.length-1}"],
+        "responses":[ "if condition need to be declared in open paranthesis"]
+    },
+    {
+        "tag": "FirstStatement",
+        "patterns": ["super();"],
+        "responses": ["error: call to super must be first statement in constructor"]
+    },
+    {
+        "tag": "PublicApplication",
+        "patterns": ["error: class JavaApplication1 is public"],
+        "responses":[ "should be declared in a file named JavaApplication1.java"]
+    },
+    {
+        "tag": "MethodSignature",
+        "patterns": ["error: invalid method declaration; return type required"],
+        "responses":[ "If the method does not return a value then \u0093void\u0094 needs to be stated as the type in the method signature"]
+    },
+    {
+        "tag": "CapitalLetters",
+        "patterns": [""],
+        "responses": ["\"s\" should be capital in (System.in);"]
+    },
+    {
+        "tag": "PrivateMethodDeclaration",
+        "patterns": ["invalid method declaration; return type required\nfixedstack(int size);"],
+        "responses": ["private method ned to be declared"]
+    },
+    {
+        "tag": "EnumExpectation",
+        "patterns": ["error: class, interface, or enum expected"],
+        "responses": ["booleans cannot be converted to an integer."]
+    },
+    {
+        "tag": "REference",
+        "patterns": ["error: class StaticTest is public"],
+        "responses": ["use a static variable as reference to a static variable"]
+    },
+    {
+        "tag": "InvalidModules",
+        "patterns": ["Error occurred during initialization of boot layer\njava.lang.module.FindException: Error reading module: C:\\Users\\student\\21r11a05f8\\week\\bin\nCaused by: java.lang.module.InvalidModuleDescriptorException: Myframe.class found in top-level directory (unnamed package not allowed in module)"],
+        "responses": ["description of invalid module. Please check the package hirarchy"]
+    },
+    {
+        "tag": "CatchingExpressions",
+        "patterns": ["catch(ArithmeticException 9)"],
+        "responses": ["not a statement"]
+    },
+    {
+        "tag": "BooleanVariables",
+        "patterns": ["error: incompatible types: int cannot be converted to Boolean while (1);"],
+        "responses":[ "in Java Boolean expression use true or false instead of the binary 1 and 0 used in other languages"]
+    },
+    {
+        "tag": "SourceFile",
+        "patterns": ["Class and source file mismatch"],
+        "responses": ["The name of the Java source file must\nexactly match the name of the public Java class\nas it is defined in the class declaration"]
+    },
+    {
+        "tag": "VoidFunction",
+        "patterns": ["error: cannot find symbol public static void main(string []a)"],
+        "responses": ["comiler could not find the main method signature for starting the execution, in the declared class system could not recognize the symbol string, where String class Sis capital"]
+    },
+    {
+        "tag": "SemicolonExpected",
+        "patterns": ["error: java: ';' expected"],
+        "responses":[ "we should provide semicolon for each statement,to terminate the statement."]
+    },
+    {
+        "tag": "InvalidmethodName",
+        "patterns": ["error:cannot found symbol method(followed by method name)"],
+        "responses":[ "compiler could not find the method ,so first declare the method."]
+    },
+    {
+        "tag": "LengthDifference",
+        "patterns": ["error:actual and formal argument lists differ in length"],
+        "responses": ["make sure actual and formal arguments are same"]
+    },
+    {
+        "tag": "scannerClass",
+        "patterns":[ "error:cannot resolve symbol 'Scanner'"],
+        "responses": ["compiler is searching for Scanner class .So we need to import Java.util.Scanner package."]
+    },
+    {
+        "tag": "ContextChanging",
+        "patterns": ["java: non-static method sout() cannot be referenced from a static context"],
+        "responses": ["method should convert from non-static to static method or we should access it through objects"]
+    },
+    {
+        "tag": "Instances",
+        "patterns": ["error:non-static variable a cannot be referenced from a static context"],
+        "responses": ["a' is instance andnon static variable .To access instance variable which is from the same class should be declared as static or we should create a object for the class."]
+    },
+    {
+        "tag": "this_keywordError",
+        "patterns": ["this should be placed if both parameters and local variables are same"],
+        "responses":[ "we should use 'this' keyword to specify current class variables . It is also applicable to invoke current class method and constuctors"]
+    },
+    {
+        "tag": "OverriddingError",
+        "patterns": ["error:'print()' in 't1' clashes with 'print()' in 'test'; attempting to assign weaker access privileges ('package-private'); was 'public'"],
+        "responses": ["we can't override protected,private and final methods,so we should use different method names to avoid this error."]
+    },
+    {
+        "tag": "MultipleClassExtension",
+        "patterns": ["error:class cannot extend multiple classess"],
+        "responses": ["use interfaces to avoid these error"]
+    },
+    {
+        "tag": "FinalvariableDeclaration",
+        "patterns": ["error:cannot assign a value to final variable"],
+        "responses": ["we cannot change the value of final varible ."]
+    },
+    {
+        "tag": "DMD",
+        "patterns": ["while upcasting or dynamic method dispatch"],
+        "responses": ["the method should present in reference class ."]
+    },
+    {
+        "tag": "ExtendedClass",
+        "patterns": ["error:class is not abstract and does not overide abstract methods"],
+        "responses": ["we should override all the methods of abstract class in extended classes."]
+    },
+    {
+        "tag": "ResourceDeclaration",
+        "patterns": ["error:'try' without 'catch', 'finally' or resource declarations"],
+        "responses": ["if try is declares compiler checks for finally or catch block ,so declare catch ."]
+    },
+    {
+        "tag": "InitialisationOfvariablesError",
+        "patterns": ["error:variable s might not have been initialized"],
+        "responses": ["before performing any operations on variables plz intialize them."]
+    },
+    {
+        "tag": "RunFuntion",
+        "patterns": ["error:run() in mt cannot implement run() in java.lang.Runnable attempting to assign weaker access privileges; was public"],
+        "responses": ["when we working with threads the run() method should return null and access specifier should be public if these both are not present it will give error."]
+    },
+    {
+        "tag": "UnreportedError",
+        "patterns": ["java: unreported exception java.lang.InterruptedException; must be caught or declared to be thrown"],
+        "responses": ["we should keep sleep() and wait() in try and catch block."]
+    },
+    {
+        "tag": "OutOfBoundLenght",
+        "patterns": ["Exception in thread \"main\" java.lang.ArrayIndexOutOfBoundsException: Index 6 out of bounds for length 5"],
+        "responses": ["check the length of array carefully and then perform operations."]
+    },
+    {
+        "tag": "AccidentalError",
+        "patterns": ["syntax errors:Missing brackets,Misspelled keywords,class not found,Missing double quotes in string"],
+        "responses": ["check properly."]
+    },
+    {
+        "tag": "ColonsUsage",
+        "patterns": ["if(n%2==0):"],
+        "responses": ["java doesnt supports colon after conditional statements hence no colons should be kept atfer conditional statements"]
+    },
+    {
+        "tag": "WrongKeywords",
+        "patterns": ["class myexe extend execption"],
+        "responses": ["wrong keyword use extends"]
+    },
+    {
+        "tag": "UnexpectedReturnValues",
+        "patterns": ["incompatible types: unexpected return value"],
+        "responses": ["no return values for constructor"]
+    },
+    {
+        "tag": "ImplementsKeyword",
+        "patterns": ["cannot inherit interfaces using extends keyword"],
+        "responses": ["we need use implements keyword"]
+    },
+    {
+        "tag": "RelevantPackages",
+        "patterns": ["Exception in thread \"main\" java.lang.UnsatisfiedLinkError: Can't load library: /usr/lib/jvm/java-17-openjdk-amd64/lib/libawt_xawt.so"],
+        "responses": ["cannot import awt package by the system ,check relavent package"]
+    },
+    {
+        "tag": "CapitalsInMethod",
+        "patterns": ["public static void main(string args[]);"],
+        "responses":[ "\"S\" should be captital in (string arg[])"]
+    },
+    {
+        "tag": "NOMainMethod",
+        "patterns": ["System doesn't contain main method"],
+        "responses": ["We need to use main method"]
+    },
+    {
+        "tag": "InterfaceExpected",
+        "patterns":[ "interface expected here"],
+        "responses": [""]
+    },
+    {
+        "tag": "IMplementingClass",
+        "patterns": ["class b implements A{"],
+        "responses": ["when we miss semicolon in the main method"]
+    },
+    {
+        "tag": "TerminationByStringLiteral",
+        "patterns": ["error: missing terminating \" character"],
+        "responses": ["we need to close string literal"]
+    },
+    {
+        "tag": "ObjectDeclaration",
+        "patterns": ["error: cannot find symbol \nobject a2=new a(); \n^ \nsymbol: class object \nlocation: class A"],
+        "responses":[ "we need to declare object as same as class name"]
+    },
+    {
+        "tag": "JavaUtilPackage",
+        "patterns":[ "error: ';' expected \nimport java.util.* \n^"],
+        "responses":[ "we need to end a line with ' ; '"]
+    },
+    {
+        "tag": "SquareBrackets",
+        "patterns": ["error: ',', ')', or '[' expected \npublic static void main(String args()) \n^"],
+        "responses":[ "we need to use '[ ]' instead of '( )'"]
+    },
+    {
+        "tag": "StartOfStatement",
+        "patterns":[ "error: illegal start of expression \nSystem.print.out(c+); \n^"],
+        "responses":[ "we cannot use a operator after a variable unless there is another variable present after the operator"]
+    },
+    {
+        "tag": "SyntaxWhilePrinting",
+        "patterns": ["error: cannot find symbol \nSystem.print.out(c); \n^ \nsymbol: variable print \nlocation: class System"],
+        "responses":[ "syntax error, original syntax : System.out.println();"]
+    },
+    {
+        "tag": "OriginalReturnType",
+        "patterns": ["error: cannot find symbol \nvois disp() \n^ \nsymbol: class vois"],
+        "responses": ["error return type, original return type \" void \""]
+    },
+    {
+        "tag": "Println",
+        "patterns": ["Main.java:5: error: package system does not exist \nsystem.out.println(\"Hello World\");"],
+        "responses": ["syntax is: System.out.println();"]
+    },
+    {
+        "tag": "UnresolvedCompilation",
+        "patterns": ["Exception in thread \"main\" java.lang.Error: Unresolved compilation problem:The method disp() from the type A is not visible."],
+        "responses": ["we cannot take methods as private while inherting"]
+    },
+    {
+        "tag": "StackExpression",
+        "patterns": ["error:reached end of file while parsing"],
+        "responses": ["balance the paranthesis"]
+    },
+    {
+        "tag": "ExtendingClasses",
+        "patterns": ["public static void main(String[] args) \nor a JavaFX application class must extend javafx.application.Application"],
+        "responses":[ "p is capital in the public static void main"]
+    },
+    {
+        "tag": "MultipleException",
+        "patterns": ["public class Multiple exceptions"],
+        "responses": ["space should not be given and e need be return in capital letters"]
+    },
+    {
+        "tag": "TypeArithematicExpression",
+        "patterns": ["Exception in thread \"main\" : Unresolved compilation problem:arithmeticexception cannot be resolved to a type"],
+        "responses": ["exception ArithmeticException should start with capital letters without space"]
+    },
+    {
+        "tag": "TokenException",
+        "patterns":[ "error \"arithmeticexception\", VariableDeclaratorId expected after this tokenarithmeticexception cannot be resolved to a type"],
+        "responses": ["variable not declared in catch block."]
+    },
+    {
+        "tag": "IndexOutOfBounds",
+        "patterns": ["Exception in thread \"main\" java.lang.ArrayIndexOutOfBoundsException: Index 0 out of bounds for length 0"],
+        "responses": ["when we entry the size as 0"]
+    },
+    {
+        "tag": "AssignmentOperatorSyntax",
+        "patterns": ["Exception in thread \"main\" java.lang.Error: Unresolved compilation problems: \nSyntax error, insert \"AssignmentOperator Expression\" to complete Assignment"],
+        "responses":[ "missing the assignment operator"]
+    },
+    {
+        "tag": "LoadingmainClass",
+        "patterns": ["Error: Could not find or load main class palindrome \nCaused by: java.lang.ClassNotFoundException: palindrome \n"],
+        "responses": ["when we provide class and file name diferently"]
+    },
+    {
+        "tag": "thisToken",
+        "patterns": ["Exception in thread \"main\" java.lang.Error: Unresolved compilation problem: \nSyntax error on token \"++\", Expression expected after this token"],
+        "responses": ["when we miss the increment variable"]
+    },
+    {
+        "tag": "MissingTryBlock",
+        "patterns": ["Exception in thread \"main\" java.lang.Error: Unresolved compilation problems:Syntax error on token \"catch\", for expected"],
+        "responses": ["missing try block with written catch"]
+    },
+    {
+        "tag": "CurlyBraces",
+        "patterns": ["Exception in thread \"main\" java.lang.Error: Unresolved compilation problem: \nSyntax error, insert \"}\" to complete ClassBody \n"],
+        "responses": ["when we miss the closing braces"]
+    },
+    {
+        "tag": "PrintingError",
+        "patterns": ["Exception in thread \"main\" java.lang.Error: Unresolved compilation problem: \nThe method println(String) is undefined for the type System"],
+        "responses": ["missing the out in the print statement"]
+    },
+    {
+        "tag": "SwitchStatements",
+        "patterns": ["switch(number)"],
+        "responses":[ "error: '{' expected"]
+    },
+    {
+        "tag": "CatchyExpressions",
+        "patterns": ["catch(Arthematic Exeception)"],
+        "responses": ["error: cannot find symbol"]
+    },
+    {
+        "tag": "ConstantFinalKeyword",
+        "patterns": ["finally"],
+        "responses":[ "error: 'finally' without 'try'"]
+    },
+    {
+        "tag": "RunnableException",
+        "patterns": ["class Main extends execption,runnable"],
+        "responses": ["java doesnot support multiple inheritance"]
+    },
+    {
+        "tag": "Resources_Try",
+        "patterns":[ "try"],
+        "responses": ["error: 'try' without 'catch', 'finally' or resource declarations"]
+    },
+    {
+        "tag": "ArgsInMethod",
+        "patterns": ["public static void main(String[] args[])"],
+        "responses":[ "error:define main method as public static void main(String args[])"]
+    },
+    {
+        "tag": "CaseStatements",
+        "patterns":[ "/Case statements"],
+        "responses": ["error: case, default, or '}' expected"]
+    },
+    {
+        "tag": "InvalidComment",
+        "patterns": ["/*Case statements"],
+        "responses": ["error: unclosed comment"]
+    },
+    {
+        "tag": "ExplicitConversion",
+        "patterns": ["Exception in thread \"main\" java.lang.Error: Unresolved compilation problems \nType mismatch: cannot convert from int to char\nType mismatch: cannot convert from int to char"],
+        "responses": ["explicit conversion,we need to use similar datatypes"]
+    },
+    {
+        "tag": "VoidAbstractClass",
+        "patterns": ["abstract void m()"],
+        "responses": ["abstract method cannot have a body"]
+    },
+    {
+        "tag": "OverriddingMethods",
+        "patterns": ["class main()"],
+        "responses": ["main is not a abstract and does not override abstract method m() in main"]
+    },
+    {
+        "tag": "SpecialSymbols",
+        "patterns": ["error: expected '=', ',', ';', 'asm' or '__attribute__' before '.' token"],
+        "responses": ["javax.crypto.BadPaddingException: Given final block not properly padded"]
+    },
+    {
+        "tag": "UnknownTypes",
+        "patterns": ["error: unknown type name 'at'"],
+        "responses":[ "remove at string from the program"]
+    },
+    {
+        "tag": "AttributeException",
+        "patterns":[ "error: expected '=', ',', ';', 'asm' or '__attribute__' before '.' token"],
+        "responses":[ "The static on the main method was forgotten."]
+    },
+    {
+        "tag": "TypeMismatch",
+        "patterns": ["Type mismatch: cannot convert from int to boolean \nSyntax error, insert \") Statement\" to complete WhileStatement \nSyntax error, insert \">\" to complete ReferenceType1 \nSyntax error, insert \"VariableDeclarators\" to complete LocalVariableDeclaration \nSyntax error on token \")\", ; expected"],
+        "responses": ["syntax error instead of for loop when we use while"]
+    },
+    {
+        "tag": "semicolonError",
+        "patterns": ["error: ';' expected for (int i = 1 i <= n ++i)"],
+        "responses": ["semicolon expected while using for loop."]
+    },
+    {
+        "tag": "StaticMethodsDeclaration",
+        "patterns": ["error: non-static method myStaticMethod() cannot be referenced from a static context myStaticMethod(); // Call static method"],
+        "responses": ["static method should be used in initializing a method."]
+    },
+    {
+        "tag": "ObjectInitialisation",
+        "patterns": ["error: cannot find symbol \nrobot firstRobot = new Robot(34,51,\"yossi\");"],
+        "responses": ["should be declared in a file named Robot.java"]
+    },
+    {
+        "tag": "ConstructorException",
+        "patterns": ["Exception in thread \"main\" java.lang.Error: Unresolved compilation problem: \nThe constructor sleep(int, int) is undefined"],
+        "responses": ["we need to enter same datatypes which we mentioned in constructor"]
+    },
+    {
+        "tag": "OpenParenthesis",
+        "patterns": ["error: '(' expected\nif{tos==stk.length-1}"],
+        "responses": ["if condition need to be declared in open paranthesis"]
+    },
+    {
+        "tag": "SuperKeyword",
+        "patterns": ["super();"],
+        "responses": ["error: call to super must be first statement in constructor"]
+    },
+    {
+        "tag": "Objects",
+        "patterns": ["error: cannot find symbol Main myObj = Main(); // Create an object of Main"],
+        "responses": ["new keyword is not declared in object creation."]
+    },
+    {
+        "tag": "ApplicationAbstraction",
+        "patterns": ["error: Shape is not abstract and does not override abstract method draw() in Shape class Shape{"],
+        "responses":[ "class name should be declared abstract."]
+    },
+    {
+        "tag": "PublicjavaApplication",
+        "patterns": ["error: class JavaApplication1 is public"],
+        "responses": ["should be declared in a file named JavaApplication1.java"]
+    },
+    {
+        "tag": "LoopingCondition",
+        "patterns": ["error: ';' expected while ( i != 5 )"],
+        "responses": ["while loop condition is ended with a semicolon"]
+    },
+    {
+        "tag": "IncompatibleTypeError",
+        "patterns": ["error: incompatible types: String cannot be converted to char size = \"Small\";"],
+        "responses":[ "String datatype should be used while declaring strings"]
+    },
+    {
+        "tag": "ReturnTypeExceptions",
+        "patterns": ["error: invalid method declaration; return type required"],
+        "responses": ["If the method does not return a value then \u0093void\u0094 needs to be stated as the type in the method signature"]
+    },
+    {
+        "tag": "SystemInputPackage",
+        "patterns": [""],
+        "responses":[ "\"s\" should be capital in (System.in);"]
+    },
+    {
+        "tag": "InvalidDeclarationOfMethods",
+        "patterns": ["invalid method declaration; return type required\nfixedstack(int size);\n"],
+        "responses": ["private method ned to be declared"]
+    },
+    {
+        "tag": "IntToBoolean",
+        "patterns": ["error: incompatible types: int cannot be converted to Boolean while (1);"],
+        "responses": ["in Java Boolean expression use true or false instead of the binary 1 and 0 used in other languages"]
+    },
+    {
+        "tag": "ColonException",
+        "patterns": ["error: : expected case 29 //using switch case"],
+        "responses": ["case should be declared with :colon"]
+    },
+    {
+        "tag": "BoolToInteger",
+        "patterns":[ ""],
+        "responses":[ "booleans cannot be converted to an integer."]
+    },
+    {
+        "tag": "StaticTest",
+        "patterns": ["error: class StaticTest is public"],
+        "responses": ["use a static variable as reference to a static variable"]
+    },
+    {
+        "tag": "BootLayer",
+        "patterns": ["Error occurred during initialization of boot layer \njava.lang.module.FindException: Error reading module: C:\\Users\\student\\21r11a05f8\\week\\bin \nCaused by: java.lang.module.InvalidModuleDescriptorException: Myframe.class found in top-level directory (unnamed package not allowed in module)"],
+        "responses": ["description of invalid module. Please check the package hirarchy"]
+    },
+    {
+        "tag": "MappingBetweenObjectandMethod",
+        "patterns": ["Exception in thread \"main\" java.lang.Error: Unresolved compilation problem:"],
+        "responses":[ "we cannot call class object with respect to method . It can be only done by calling wrt it's class."]
+    },
+    {
+        "tag": "NoError",
+        "patterns": [""],
+        "responses": ["The method basic() is undefined for the type basic"]
+    },
+    {
+        "tag": "DefaultConstructor",
+        "patterns": ["Exception in thread \"main\" java.lang.Error: Unresolved compilation problem:"],
+        "responses":[ "we should not create class object with respect to method it must be done with respect to its default constructor"]
+    },
+    {
+        "tag": "Error",
+        "patterns": [""],
+        "responses": ["display cannot be resolved to a type"]
+    },
+    {
+        "tag": "VariableasParameter",
+        "patterns": ["catch(arithmeticException e)"],
+        "responses": ["we have to declare capital A in (ArithmeticException e)"]
+    },
+    {
+        "tag": "NoSuitableMethod",
+        "patterns": ["error: no suitable method found for println(String,String)"],
+        "responses":[ "we have to declare \"+\" in place of \",\""]
+    },
+    {
+        "tag": "OutputPackage",
+        "patterns": ["System.out.println(\"First Argument: \" , firstArg);"],
+        "responses": [""]
+    },
+    {
+        "tag": "JNIError",
+        "patterns": ["A JNI error has occurred, please check your installation and try again"],
+        "responses": ["java does not supported"]
+    },
+    {
+        "tag": "ProhibitedPackageUsage",
+        "patterns": ["Exception in thread \"main\" java.lang.SecurityException: Prohibited package name: java"],
+        "responses": [""]
+    },
+    {
+        "tag": "StartOfExpression",
+        "patterns": ["error: illegal start of expression"],
+        "responses": ["declaring expressions"]
+    },
+    {
+        "tag": "ForLooping",
+        "patterns": ["for(int i=0'i<5,i++)"],
+        "responses":[ ""]
+    },
+    {
+        "tag": "MyStkException",
+        "patterns": ["error: ';' expected\nSystem.out.println(mystk.pop())\n"],
+        "responses": ["semicolon need to be given,main method will have square brackets"]
+    },
+    {
+        "tag": "NoProcessTermination",
+        "patterns": ["public static void main(String args());"],
+        "responses": ["semicolon should not be declared for main method"]
+    },
+    {
+        "tag": "ArithematicError",
+        "patterns": ["int 20=20; syntax error"],
+        "responses":[ "the left-hand side of an assignment must be a variable"]
+    },
+    {
+        "tag": "NoStaticMethodINMain",
+        "patterns": ["Main method is not static in class demo, please define the main method as:"],
+        "responses": ["please define the main method as:"]
+    },
+    {
+        "tag": "NoGoodSyntax",
+        "patterns": ["public static void main(String[] args)"],
+        "responses": ["public static void main(String[] args)"]
+    },
+    {
+        "tag": "MiisingValidReturnType",
+        "patterns": ["Return type for the method is missing"],
+        "responses": ["Set method return type to 'void'"]
+    },
+    {
+        "tag": "BooleanExpression",
+        "patterns": ["boolean x=89; error: Unresolved compilation problem"],
+        "responses": ["Type mismatch: cannot convert from int to boolean"]
+    },
+    {
+        "tag": "ParsingFile",
+        "patterns": ["error:reached end of file while parsing"],
+        "responses": ["balance the paranthesis"]
+    },
+    {
+        "tag": "NotSTaticVariables",
+        "patterns":[ "public void main(String[] args);error:Min method is not static in class"],
+        "responses": ["define main method as:public static void main(String[] args)"]
+    },
+    {
+        "tag": "IndexOutOfBoundException",
+        "patterns":[ "Exception in thread \"main\" java.lang.IndexOutOfBoundsException: Index -1 out of bounds for length 1"],
+        "responses":[ "In arraylist the Array indexes start with 0."]
+    },
+    {
+        "tag": "ArrayListFunction",
+        "patterns": ["java: method set in class java.util.ArrayList<E> cannot be applied to given types;"],
+        "responses":[ "set()method consist two arguments so we should pass two arguments.actual and formal argument lists differ in length"]
+    },
+    {
+        "tag": "LengthEqualsZero",
+        "patterns": ["Exception in thread \"main\" java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0"],
+        "responses":[ "if list is empty we cant access anything,make sure about list is empty are not."]
+    },
+    {
+        "tag": "CollectionPackage",
+        "patterns":[ "java: method sort in class java.util.ArrayList<E> cannot be applied to given types;required: java.util.Comparator"],
+        "responses":[ "for sorting we should import java.util.Collections; syntax is:Collections.sort(collection_name);"]
+    },
+    {
+        "tag": "WrongNumberOfArguments",
+        "patterns":[ "java: wrong number of type arguments; required 2"],
+        "responses": ["in Hashmap we should give two arguments one for keys and one for values."]
+    },
+    {
+        "tag": "ExceptionInPackageDeclaration",
+        "patterns":[ "Exception in thread \"main\" java.awt.HeadlessException"],
+        "responses": ["correct package must be entered"]
+    },
+    {
+        "tag": "NoPackageName",
+        "patterns": ["error: package java.swing does not exist"],
+        "responses": ["it must be import javax.swing.*"]
+    },
+    {
+        "tag": "ClassINPublicMode",
+        "patterns": ["error: class test1 is public"],
+        "responses": ["should be declared in a file named test1.java"]
+    },
+    {
+        "tag": "DoubleQuotedString",
+        "patterns": ["error:String literal is not properly closed by a double -quote"],
+        "responses":[ "String literal should be properly closed by a double -quote"]
+    },
+    {
+        "tag": "SyntaxErrorUnavailable",
+        "patterns": ["error: identifier expected class 1SyntaxError"],
+        "responses": ["the name of the main class is invalid as it starts from a number"]
+    },
+    {
+        "tag": "SPOJ",
+        "patterns": ["spoj: The program compiled successfully, but main class was not found."],
+        "responses": ["Main class should contain method: public static void main (String[] args)."]
+    },
+    {
+        "tag": "CharacterIllegallydeclared",
+        "patterns": ["error: illegal character: '\\u201d' File file = new File(\u0093test.txt\u0094);"],
+        "responses": ["When there is no more data while the class \u0093DataInputStream\u0094 is trying to read data in the stream, \u0093EOFException\u0094 will be thrown. It can also occur in the \u0093ObjectInputStream\u0094 and \u0093RandomAccessFile\u0094 classes."]
+    },
+    {
+        "tag": "OSError",
+        "patterns": ["java -cp /tmp/UDRgGsLLQ6 JavaError Something went wrong!"],
+        "responses": ["an exception is thrown making the catch block execute and print \"something went wrong\""]
+    },
+    {
+        "tag": "BoundsForLength",
+        "patterns": ["Exception in thread \"main\" java.lang.ArrayIndexOutOfBoundsException: Index 8 out of bounds for length 5"],
+        "responses": ["then we try to access an array index that is out of bounding of the size of the array(in this case it's 5), we get runtime error of array out of bound."]
+    },
+    {
+        "tag": "DividingByZeroError",
+        "patterns": ["Exception in thread \"main\" java.lang.ArithmeticException: / by zero"],
+        "responses": ["We cannot divide anything from zero so when we try to do that we get an arithmetic exception at runtime."]
+    },
+    {
+        "tag": "NegativeArray",
+        "patterns": ["Exception in thread \"main\" java.lang.NegativeArraySizeException: -5"],
+        "responses": ["array size shouldn't be negative"]
+    },
+    {
+        "tag": "NoFileFoundError",
+        "patterns": ["error: illegal character: '\\u201c'"],
+        "responses": ["throw new FileNotFoundException(\u0093Unsupported uri: \u0093 + uri.toString());"]
+    },
+    {
+        "tag": "ImportPackageError",
+        "patterns": ["error: unknown type name 'import'"],
+        "responses": [".* should be added before the semicolon in header line"]
+    },
+    {
+        "tag": "UsingSpecialSymbols",
+        "patterns": ["error: stray '@' in program"],
+        "responses": ["In addition to files not exhibiting the specified pathname, this could mean the existing file is inaccessible."]
+    }
+
+    ]
+}
